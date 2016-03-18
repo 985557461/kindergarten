@@ -1,4 +1,4 @@
-package com.xy.ChatWebSocket.model;
+package com.xy.ChatWebSocket.chat.model;
 
 import com.google.gson.annotations.SerializedName;
 

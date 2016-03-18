@@ -1,12 +1,11 @@
-package com.xy.ChatWebSocket;
+package com.xy.ChatWebSocket.ui;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import com.google.gson.Gson;
-import com.xy.ChatWebSocket.model.LoginOutModel;
-import com.xy.ChatWebSocket.model.SayModel;
-import com.xy.ChatWebSocket.socket.WebSocketClient;
+import com.xy.ChatWebSocket.chat.WebSocketClient;
+import com.xy.ChatWebSocket.chat.model.LoginOutModel;
+import com.xy.ChatWebSocket.chat.model.SayModel;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,21 +14,35 @@ import java.net.URI;
 import java.util.Arrays;
 import java.util.List;
 
-public class MyActivity extends Activity {
+/**
+ * Created by liangyu on 2016/3/18.
+ */
+public class ActivityChat extends ActivityBaseWithSliding {
     private String TAG = "xiaoyu";
     private Gson gson = new Gson();
     private WebSocketClient client;
     private String pongString = "{\"type\":\"pong\"}";
     private String loginString = "{\"type\":\"login\",\"client_name\":\"AndroidXY\",\"room_id\":\"1\"}";
-
     private String urlString = "ws://182.92.218.87:7272";
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        doConnect();
+    protected void getViews() {
+
+    }
+
+    @Override
+    protected void initViews() {
+
+    }
+
+    @Override
+    protected void setListeners() {
+
     }
 
     private void doConnect() {
@@ -89,7 +102,9 @@ public class MyActivity extends Activity {
 
     @Override
     protected void onDestroy() {
-        client.disconnect();
+        if(client != null){
+            client.disconnect();
+        }
         super.onDestroy();
     }
 }

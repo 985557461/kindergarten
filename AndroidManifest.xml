@@ -9,15 +9,20 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
-    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+    <application android:label="@string/app_name"
+                 android:icon="@drawable/ic_launcher"
+                 android:theme="@android:style/Theme.NoTitleBar">
 
-        <activity android:name="MyActivity"
-                  android:label="@string/app_name"
+        <activity android:name=".ui.ActivityMain"
+                  android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".ui.ActivityImage"
+                  android:theme="@style/SlideAppTheme"
+                  android:screenOrientation="portrait"/>
     </application>
 </manifest>

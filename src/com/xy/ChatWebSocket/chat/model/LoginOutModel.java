@@ -1,4 +1,4 @@
-package com.xy.ChatWebSocket.model;
+package com.xy.ChatWebSocket.chat.model;
 
 /**
  * Created by liangyu on 2016/3/8.

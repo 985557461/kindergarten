@@ -1,4 +1,4 @@
-package com.xy.ChatWebSocket.socket;
+package com.xy.ChatWebSocket.chat;
 
 import android.os.Handler;
 import android.os.HandlerThread;
