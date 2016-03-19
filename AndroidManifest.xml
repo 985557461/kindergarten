@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.xy.ChatWebSocket"
+          package="com.xy.MeiFour"
           android:versionCode="1"
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="11"
@@ -9,16 +9,16 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
-    <meta-data android:name="com.xy.ChatWebSocket.util.glide.GlideConfiguration"
+    <meta-data android:name="com.xy.MeiFour.util.glide.GlideConfiguration"
                android:value="GlideModule"/>
 
     <application
-            android:name=".ui.CustomApplication"
+            android:name="com.xy.MeiFour.ui.CustomApplication"
             android:label="@string/app_name"
             android:icon="@drawable/ic_launcher"
             android:theme="@android:style/Theme.NoTitleBar">
 
-        <activity android:name=".ui.user.ActivityLogin"
+        <activity android:name="com.xy.MeiFour.ui.user.ActivityLogin"
                   android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait">
             <intent-filter>
@@ -26,10 +26,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.ActivityMain"
+        <activity android:name="com.xy.MeiFour.ui.ActivityMain"
                   android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait"/>
-        <activity android:name=".ui.user.ActivityRegister"
+        <activity android:name="com.xy.MeiFour.ui.user.ActivityRegister"
                   android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait"/>
     </application>

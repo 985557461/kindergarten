@@ -14,13 +14,26 @@
         <option name="name" value="app: com.xy.ChatWebSocket" />
         <option name="packageNamePattern" value="com.xy.ChatWebSocket" />
       </filter>
+      <filter>
+        <option name="name" value="app: com.xy.MeiFour" />
+        <option name="packageNamePattern" value="com.xy.MeiFour" />
+      </filter>
     </filters>
   </component>
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <devices>
+          <device id="Nexus 5" />
+        </devices>
+      </config>
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/res/layout/activity_login.xml">
+        <config>
+          <theme>@android:style/Theme.Black.NoTitleBar</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/res/layout/title_layout.xml">
         <config>
           <theme>@android:style/Theme.Black.NoTitleBar</theme>
@@ -30,11 +43,175 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.xy.ChatWebSocket" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.xy.MeiFour" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26d6bf35-7cf6-4a2f-a3d1-1b22251f36f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xy/ChatWebSocket/ui/user/ActivityLogin.java" afterPath="$PROJECT_DIR$/src/com/xy/ChatWebSocket/ui/user/ActivityLogin.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/ui/ActivityBaseNoSliding.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/ui/ActivityBaseWithSliding.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/ui/ActivityChat.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/ui/ActivityImage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/ui/user/ActivityLogin.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/ui/ActivityMain.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ActivityManagerUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/ui/user/ActivityRegister.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/right_finish/ActivitySliding.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/callback/BitmapCallback.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/right_finish/BitmapItem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/callback/Callback.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/viewflow/CircleFlowIndicator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/cookie/CookieJarImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/cookie/store/CookieStore.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/request/CountingRequestBody.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/ui/CustomApplication.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/utils/Exceptions.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/callback/FileCallBack.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/viewflow/FlowIndicator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/builder/GetBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/request/GetRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/glide/GlideCircleTransform.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/glide/GlideConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/glide/GlideRoundTransform.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/cookie/store/HasCookieStore.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/builder/HasParamsable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/builder/HeadBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/https/HttpsUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/chat/HybiParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/utils/ImageUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/right_finish/IntentUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/utils/L.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/log/LoggerInterceptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/chat/model/LoginOutModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/header/MaterialHeader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/header/MaterialProgressDrawable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/cookie/store/MemoryCookieStore.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/request/OkHttpRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/builder/OkHttpRequestBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/OkHttpUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/request/OtherRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/builder/OtherRequestBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/cookie/store/PersistentCookieStore.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/builder/PostFileBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/request/PostFileRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/builder/PostFormBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/request/PostFormRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/builder/PostStringBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/request/PostStringRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/util/PtrCLog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/PtrClassicDefaultHeader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/PtrClassicFrameLayout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/PtrDefaultHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/PtrFrameLayout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/PtrHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/indicator/PtrIndicator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/util/PtrLocalDisplay.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/indicator/PtrTensionIndicator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/PtrUIHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/PtrUIHandlerHolder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/PtrUIHandlerHook.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/request/RequestCall.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/chat/model/SayModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/cookie/store/SerializableHttpCookie.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/right_finish/SlidingLayout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/header/StoreHouseBarItem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/header/StoreHouseHeader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/header/StoreHousePath.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/callback/StringCallback.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/viewflow/TitleFlowIndicator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/viewflow/TitleProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/ToastUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/viewflow/ViewFlow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/util/WeakHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xy/MeiFour/chat/WebSocketClient.java" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\gen\com\xy\ChatWebSocket\Manifest.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\gen\com\xy\ChatWebSocket\R.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\out\production\ChatWebSocket\com\xy\ChatWebSocket\BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\out\production\ChatWebSocket\com\xy\ChatWebSocket\R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\out\production\ChatWebSocket\com\xy\ChatWebSocket\R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\out\production\ChatWebSocket\com\xy\ChatWebSocket\R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\out\production\ChatWebSocket\com\xy\ChatWebSocket\R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\out\production\ChatWebSocket\com\xy\ChatWebSocket\R.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\chat\HybiParser.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\chat\WebSocketClient.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\chat\model\LoginOutModel.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\chat\model\SayModel.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\right_finish\ActivitySliding.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\right_finish\BitmapItem.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\right_finish\IntentUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\right_finish\SlidingLayout.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\ui\ActivityBaseNoSliding.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\ui\ActivityBaseWithSliding.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\ui\ActivityChat.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\ui\ActivityImage.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\ui\ActivityMain.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\ui\CustomApplication.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\ui\user\ActivityLogin.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\ui\user\ActivityRegister.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ActivityManagerUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ToastUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\WeakHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\glide\GlideCircleTransform.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\glide\GlideConfiguration.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\glide\GlideRoundTransform.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\OkHttpUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\builder\GetBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\builder\HasParamsable.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\builder\HeadBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\builder\OkHttpRequestBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\builder\OtherRequestBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\builder\PostFileBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\builder\PostFormBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\builder\PostStringBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\callback\BitmapCallback.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\callback\Callback.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\callback\FileCallBack.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\callback\StringCallback.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\cookie\CookieJarImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\cookie\store\CookieStore.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\cookie\store\HasCookieStore.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\cookie\store\MemoryCookieStore.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\cookie\store\PersistentCookieStore.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\cookie\store\SerializableHttpCookie.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\https\HttpsUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\log\LoggerInterceptor.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\request\CountingRequestBody.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\request\GetRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\request\OkHttpRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\request\OtherRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\request\PostFileRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\request\PostFormRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\request\PostStringRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\request\RequestCall.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\utils\Exceptions.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\utils\ImageUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\okhttp\utils\L.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\PtrClassicDefaultHeader.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\PtrClassicFrameLayout.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\PtrDefaultHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\PtrFrameLayout.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\PtrHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\PtrUIHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\PtrUIHandlerHolder.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\PtrUIHandlerHook.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\header\MaterialHeader.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\header\MaterialProgressDrawable.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\header\StoreHouseBarItem.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\header\StoreHouseHeader.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\header\StoreHousePath.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\indicator\PtrIndicator.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\indicator\PtrTensionIndicator.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\util\PtrCLog.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\ultra_pull_refresh\util\PtrLocalDisplay.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\viewflow\CircleFlowIndicator.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\viewflow\FlowIndicator.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\viewflow\TitleFlowIndicator.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\viewflow\TitleProvider.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\workSpace\kindergarten\src\com\xy\ChatWebSocket\util\viewflow\ViewFlow.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/slide_layout.xml" afterPath="$PROJECT_DIR$/res/layout/slide_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="G:\workSpace\kindergarten\gen\com\xy\ChatWebSocket\BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/xy/MeiFour/BuildConfig.java" />
     </list>
     <ignored path=".idea/" />
     <ignored path="out/" />
@@ -62,54 +239,106 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ActivityLogin.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/ui/user/ActivityLogin.java">
+      <file leaf-file-name="WebSocketClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/chat/WebSocketClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6130031" vertical-offset="0" max-vertical-offset="1672">
-              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-              <folding>
-                <element signature="e#2061#2095#0" expanded="true" />
-                <element signature="e#2260#2289#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivityRegister.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/ui/user/ActivityRegister.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1452">
-              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1486#1487#0" expanded="true" />
-                <element signature="e#1535#1536#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_login.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.372093" vertical-offset="0" max-vertical-offset="2838">
-              <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3960" max-vertical-offset="5192">
+              <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_register.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_register.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="ActivityChat.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/ui/ActivityChat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.017857" vertical-offset="4923" max-vertical-offset="5500">
-              <caret line="234" column="41" selection-start-line="234" selection-start-column="33" selection-end-line="234" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1611" max-vertical-offset="2244">
+              <caret line="69" column="50" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
+              <folding>
+                <element signature="e#1193#3442#0" expanded="true" />
+                <element signature="e#3441#3442#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/ui/CustomApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="528">
+              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlideCircleTransform.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/glide/GlideCircleTransform.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="990">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlideConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/glide/GlideConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="550">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlideRoundTransform.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/glide/GlideRoundTransform.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1012">
+              <caret line="28" column="35" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToastUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ToastUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1369" max-vertical-offset="2200">
+              <caret line="78" column="53" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WeakHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/WeakHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="7617" max-vertical-offset="9900">
+              <caret line="386" column="5" selection-start-line="386" selection-start-column="5" selection-end-line="386" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActivitySliding.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/right_finish/ActivitySliding.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.7376543" vertical-offset="1292" max-vertical-offset="2486">
+              <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -131,10 +360,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/xy/ChatWebSocket/ui/ActivityMain.java" />
-        <option value="$PROJECT_DIR$/src/com/xy/ChatWebSocket/ui/ActivityImage.java" />
-        <option value="$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/glide/GlideConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/glide/GlideCircleTransform.java" />
         <option value="$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/glide/GlideRoundTransform.java" />
         <option value="$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/okhttp/callback/BitmapCallback.java" />
         <option value="$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/okhttp/callback/StringCallback.java" />
@@ -177,11 +402,15 @@
         <option value="$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ToastUtil.java" />
         <option value="$PROJECT_DIR$/src/com/xy/ChatWebSocket/ui/ActivityBaseWithSliding.java" />
         <option value="$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/WeakHandler.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_register.xml" />
         <option value="$PROJECT_DIR$/src/com/xy/ChatWebSocket/ui/user/ActivityRegister.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_login.xml" />
+        <option value="$PROJECT_DIR$/src/com/xy/ChatWebSocket/ui/ActivityTest.java" />
         <option value="$PROJECT_DIR$/src/com/xy/ChatWebSocket/ui/user/ActivityLogin.java" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/src/com/xy/MeiFour/util/WeakHandler.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/xy/MeiFour/right_finish/ActivitySliding.java" />
       </list>
     </option>
   </component>
@@ -201,7 +430,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
+    <option name="width" value="1932" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -262,7 +491,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ChatWebSocket" />
+              <option name="myItemId" value="MeiFour" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -284,11 +513,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ChatWebSocket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
+              <option name="myItemId" value="MeiFour" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -306,7 +531,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="MeiFour" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="right_finish" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="ChatWebSocket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kindergarten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MeiFour" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chat" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -334,11 +585,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
+              <option name="myItemId" value="gen" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -359,6 +606,9 @@
     <property name="recentsLimit" value="5" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="630" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -491,6 +741,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
@@ -616,7 +871,7 @@
     </configuration>
     <configuration default="false" name="ChatWebSocket" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="ChatWebSocket" />
-      <option name="ACTIVITY_CLASS" value="com.xy.ChatWebSocket.ui.ActivityMain" />
+      <option name="ACTIVITY_CLASS" value="com.xy.MeiFour.ui.ActivityMain" />
       <option name="MODE" value="specific_activity" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -655,49 +910,51 @@
       <created>1457432658957</created>
       <option name="number" value="Default" />
       <updated>1457432658957</updated>
-      <workItem from="1458352071459" duration="7283000" />
+      <workItem from="1458352071459" duration="7323000" />
+      <workItem from="1458359616253" duration="3741000" />
+      <workItem from="1458375340440" duration="168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7283000" />
+    <option name="totallyTimeSpent" value="11232000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1932" height="1056" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973205" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37662336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2260128" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26948053" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1988273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.267316" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19871795" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2260128" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -727,93 +984,18 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/okhttp/request/OkHttpRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/okhttp/request/OtherRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/okhttp/request/PostFileRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/okhttp/request/PostFormRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7727273" vertical-offset="0" max-vertical-offset="0">
-          <caret line="55" column="77" selection-start-line="55" selection-start-column="77" selection-end-line="55" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/okhttp/request/PostStringRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2159091" vertical-offset="0" max-vertical-offset="0">
-          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/okhttp/request/RequestCall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1590909" vertical-offset="0" max-vertical-offset="0">
-          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/okhttp/utils/Exceptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/okhttp/utils/ImageUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/okhttp/utils/L.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/okhttp/builder/GetBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/builder/GetBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.6022727" vertical-offset="0" max-vertical-offset="0">
           <caret line="80" column="55" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/okhttp/OkHttpUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/okhttp/OkHttpUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52272725" vertical-offset="0" max-vertical-offset="0">
           <caret line="112" column="23" selection-start-line="112" selection-start-column="23" selection-end-line="112" selection-end-column="23" />
-          <folding>
-            <element signature="e#3386#3387#0" expanded="false" />
-            <element signature="e#3425#3426#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -825,63 +1007,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/viewflow/TitleFlowIndicator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/viewflow/TitleFlowIndicator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26086956" vertical-offset="0" max-vertical-offset="0">
           <caret line="78" column="38" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/viewflow/FlowIndicator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/viewflow/FlowIndicator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5217391" vertical-offset="0" max-vertical-offset="0">
           <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/viewflow/CircleFlowIndicator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/viewflow/CircleFlowIndicator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3043478" vertical-offset="0" max-vertical-offset="0">
           <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/viewflow/ViewFlow.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/viewflow/ViewFlow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/header/MaterialHeader.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/header/MaterialHeader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47826087" vertical-offset="0" max-vertical-offset="0">
           <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/viewflow/TitleProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/viewflow/TitleProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6086956" vertical-offset="0" max-vertical-offset="0">
           <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/header/MaterialProgressDrawable.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/header/MaterialProgressDrawable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="145" column="59" selection-start-line="145" selection-start-column="59" selection-end-line="145" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/header/StoreHouseBarItem.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/header/StoreHouseBarItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/header/StoreHouseHeader.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/header/StoreHouseHeader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="273" column="99" selection-start-line="273" selection-start-column="99" selection-end-line="273" selection-end-column="99" />
@@ -891,35 +1073,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/header/StoreHousePath.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/header/StoreHousePath.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/indicator/PtrIndicator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/indicator/PtrIndicator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/indicator/PtrTensionIndicator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/indicator/PtrTensionIndicator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/util/PtrCLog.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/util/PtrCLog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/util/PtrLocalDisplay.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/util/PtrLocalDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
@@ -927,25 +1109,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/cube_ptr_classic_default_header.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.010101" vertical-offset="0" max-vertical-offset="0">
           <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/cube_ptr_simple_loading.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/cube_ptr_simple_loading.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34042552" vertical-offset="0" max-vertical-offset="517">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values-zh/cube_ptr_string.xml">
@@ -964,7 +1146,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/PtrClassicDefaultHeader.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/PtrClassicDefaultHeader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="239" column="55" selection-start-line="239" selection-start-column="55" selection-end-line="239" selection-end-column="55" />
@@ -972,17 +1154,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/PtrClassicFrameLayout.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/PtrClassicFrameLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/PtrFrameLayout.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/PtrFrameLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="206" column="64" selection-start-line="206" selection-start-column="64" selection-end-line="206" selection-end-column="64" />
@@ -992,204 +1171,227 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/PtrHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/PtrHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26876092" vertical-offset="0" max-vertical-offset="573">
           <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/PtrUIHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/PtrUIHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38568935" vertical-offset="351" max-vertical-offset="924">
           <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/PtrUIHandlerHolder.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/PtrUIHandlerHolder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38568935" vertical-offset="2881" max-vertical-offset="3454">
           <caret line="149" column="98" selection-start-line="149" selection-start-column="98" selection-end-line="149" selection-end-column="98" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/PtrUIHandlerHook.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/PtrUIHandlerHook.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.8045375" vertical-offset="0" max-vertical-offset="1254">
           <caret line="49" column="6" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
-          <folding>
-            <element signature="e#1056#1057#0" expanded="true" />
-            <element signature="e#1096#1097#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ultra_pull_refresh/PtrDefaultHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ultra_pull_refresh/PtrDefaultHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/ui/ActivityMain.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/ui/ActivityMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16206262" vertical-offset="0" max-vertical-offset="946">
           <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding>
-            <element signature="e#522#804#0" expanded="false" />
-            <element signature="e#803#804#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/blue_bg_shape.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21235521" vertical-offset="0" max-vertical-offset="518">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/login_selector.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16206262" vertical-offset="0" max-vertical-offset="543">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/ToastUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.696219" vertical-offset="0" max-vertical-offset="2310">
-          <caret line="94" column="58" selection-start-line="94" selection-start-column="58" selection-end-line="94" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/ui/ActivityBaseWithSliding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="858">
-          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/util/WeakHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.377205" vertical-offset="5959" max-vertical-offset="10670">
-          <caret line="384" column="40" selection-start-line="384" selection-start-column="40" selection-end-line="384" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3017#3018#0" expanded="false" />
-            <element signature="e#3067#3068#0" expanded="false" />
-            <element signature="e#7150#7151#0" expanded="false" />
-            <element signature="e#7214#7215#0" expanded="false" />
-            <element signature="e#8438#8439#0" expanded="false" />
-            <element signature="e#8483#8484#0" expanded="false" />
-            <element signature="e#8833#8834#0" expanded="false" />
-            <element signature="e#8884#8885#0" expanded="false" />
-            <element signature="e#12615#12616#0" expanded="false" />
-            <element signature="e#12674#12675#0" expanded="false" />
-            <element signature="e#12839#12840#0" expanded="false" />
-            <element signature="e#12881#12882#0" expanded="false" />
-            <element signature="e#13155#13156#0" expanded="false" />
-            <element signature="e#13205#13206#0" expanded="false" />
-            <element signature="e#13480#13481#0" expanded="false" />
-            <element signature="e#13535#13536#0" expanded="false" />
-            <element signature="e#13703#13704#0" expanded="false" />
-            <element signature="e#13749#13750#0" expanded="false" />
-            <element signature="e#13958#13959#0" expanded="false" />
-            <element signature="e#14012#14013#0" expanded="false" />
-            <element signature="e#14051#14052#0" expanded="false" />
-            <element signature="e#14091#14092#0" expanded="false" />
-            <element signature="e#14586#14587#0" expanded="false" />
-            <element signature="e#14626#14627#0" expanded="false" />
-            <element signature="e#14691#14692#0" expanded="false" />
-            <element signature="e#14735#14736#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/ui/CustomApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="572">
-          <caret line="0" column="31" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="31" />
-          <folding>
-            <element signature="e#360#361#0" expanded="false" />
-            <element signature="e#391#392#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="325" max-vertical-offset="924">
-          <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
-          <folding>
-            <element signature="e#674#692#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/right_finish/ActivitySliding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="784" max-vertical-offset="2222">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_register.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.017857" vertical-offset="4923" max-vertical-offset="5500">
+        <state vertical-scroll-proportion="-4.25" vertical-offset="4910" max-vertical-offset="5500">
           <caret line="234" column="41" selection-start-line="234" selection-start-column="33" selection-end-line="234" selection-end-column="41" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/blue_bg_shape.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.372093" vertical-offset="0" max-vertical-offset="2838">
-          <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
-          <folding />
+        <state vertical-scroll-proportion="0.14170693" vertical-offset="0" max-vertical-offset="621">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/ui/user/ActivityRegister.java">
+    <entry file="file://$PROJECT_DIR$/res/drawable/login_selector.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1452">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        <state vertical-scroll-proportion="-1.76" vertical-offset="0" max-vertical-offset="220">
+          <caret line="2" column="66" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32142857" vertical-offset="2460" max-vertical-offset="2838">
+          <caret line="111" column="4" selection-start-line="111" selection-start-column="4" selection-end-line="111" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/ui/ActivityBaseWithSliding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1486#1487#0" expanded="true" />
-            <element signature="e#1535#1536#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xy/ChatWebSocket/ui/user/ActivityLogin.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/ui/user/ActivityRegister.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6130031" vertical-offset="0" max-vertical-offset="1672">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1408">
+          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
           <folding>
-            <element signature="e#2061#2095#0" expanded="true" />
-            <element signature="e#2260#2289#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/ui/ActivityBaseNoSliding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="836">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27804106" vertical-offset="0" max-vertical-offset="26928">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14170693" vertical-offset="0" max-vertical-offset="621">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/ui/user/ActivityLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="344" max-vertical-offset="1650">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="436" max-vertical-offset="770">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/chat/WebSocketClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3960" max-vertical-offset="5192">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/ui/ActivityChat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1611" max-vertical-offset="2244">
+          <caret line="69" column="50" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
+          <folding>
+            <element signature="e#1193#3442#0" expanded="true" />
+            <element signature="e#3441#3442#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/ui/CustomApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/glide/GlideCircleTransform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="990">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/glide/GlideConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="550">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/glide/GlideRoundTransform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1012">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/ToastUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1369" max-vertical-offset="2200">
+          <caret line="78" column="53" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/WeakHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7617" max-vertical-offset="9900">
+          <caret line="386" column="5" selection-start-line="386" selection-start-column="5" selection-end-line="386" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xy/MeiFour/right_finish/ActivitySliding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7376543" vertical-offset="1292" max-vertical-offset="2486">
+          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
