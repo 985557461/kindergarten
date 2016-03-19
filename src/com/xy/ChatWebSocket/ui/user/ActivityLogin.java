@@ -25,6 +25,7 @@ public class ActivityLogin extends ActivityBaseNoSliding implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_login);
         super.onCreate(savedInstanceState);
+        
     }
 
     @Override
