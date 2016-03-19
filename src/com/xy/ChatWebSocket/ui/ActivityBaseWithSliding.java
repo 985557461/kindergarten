@@ -1,5 +1,6 @@
 package com.xy.ChatWebSocket.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import com.xy.ChatWebSocket.right_finish.ActivitySliding;
 import com.xy.ChatWebSocket.util.ActivityManagerUtil;
@@ -31,4 +32,5 @@ public abstract class ActivityBaseWithSliding extends ActivitySliding {
     protected abstract void initViews();
 
     protected abstract void setListeners();
+
 }
