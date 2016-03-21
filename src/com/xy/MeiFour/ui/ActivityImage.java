@@ -2,6 +2,7 @@ package com.xy.MeiFour.ui;
 
 import android.os.Bundle;
 import com.xy.MeiFour.R;
+import com.xy.MeiFour.ui.common.ActivityBaseWithSliding;
 
 /**
  * Created by liangyu on 15/10/13.

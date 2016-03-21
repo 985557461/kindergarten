@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.xy.MeiFour.R;
-import com.xy.MeiFour.ui.ActivityBaseWithSliding;
+import com.xy.MeiFour.ui.common.ActivityBaseWithSliding;
 
 /**
  * Created by xiaoyu on 2016/3/15.

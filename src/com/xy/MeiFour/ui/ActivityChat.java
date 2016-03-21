@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import com.xy.MeiFour.chat.WebSocketClient;
 import com.xy.MeiFour.chat.model.LoginOutModel;
 import com.xy.MeiFour.chat.model.SayModel;
+import com.xy.MeiFour.ui.common.ActivityBaseWithSliding;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import com.xy.MeiFour.R;
 import com.xy.MeiFour.right_finish.IntentUtils;
-import com.xy.MeiFour.ui.ActivityBaseNoSliding;
+import com.xy.MeiFour.ui.common.ActivityBaseNoSliding;
 import com.xy.MeiFour.util.ToastUtil;
 
 /**

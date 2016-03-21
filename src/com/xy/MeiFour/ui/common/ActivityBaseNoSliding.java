@@ -1,4 +1,4 @@
-package com.xy.MeiFour.ui;
+package com.xy.MeiFour.ui.common;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
