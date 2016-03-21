@@ -64,4 +64,10 @@ public class ActivityMain extends ActivityBaseNoSliding {
         }
         super.onBackPressed();
     }
+
+    @Override
+    protected void onDestroy() {
+        ActivityManagerUtil.getInstance().killActivity();
+        super.onDestroy();
+    }
 }

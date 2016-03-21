@@ -9,5 +9,51 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="#282a32">
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:text="首页"
+                android:gravity="center"
+                android:textSize="14sp"/>
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:text="数据采集"
+                android:gravity="center"
+                android:textSize="14sp"/>
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:text="智能搭配"
+                android:gravity="center"
+                android:textSize="14sp"/>
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:text="购物车"
+                android:gravity="center"
+                android:textSize="14sp"/>
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:text="我的"
+                android:gravity="center"
+                android:textSize="14sp"/>
+    </LinearLayout>
 </LinearLayout>
 

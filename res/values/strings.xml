@@ -3,4 +3,5 @@
     <string name="app_name">ChatWebSocket</string>
     <string name="input_phonenum">请输入手机号码</string>
     <string name="input_pwd">请输入密码</string>
+    <string name="phone_not_valid">輸入的手机号不合法</string>
 </resources>

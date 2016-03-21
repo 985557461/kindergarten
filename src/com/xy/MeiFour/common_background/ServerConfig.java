@@ -18,4 +18,8 @@ public class ServerConfig {
             ServerConfig.BASE_URL = ServerConfig.BASE_URL_OFFICAL;
         }
     }
+
+    public static final String URL_GET_VER_CODE = "meifor/api/accounts/register.do";
+    public static final String URL_REGISTER = "meifor/api/accounts/activate.do";
+    public static final String URL_LOGIN = "meifor/api/accounts/login.do";
 }
