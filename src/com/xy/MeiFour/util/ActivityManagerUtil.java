@@ -44,9 +44,8 @@ public class ActivityManagerUtil {
 
     public void killActivity() {
         if (activityList != null) {
-            int count = activityList.size();
-            for (int i = 0; 0 < count; i++) {
-                Activity activity = activityList.remove(i);
+            for (; 0 < activityList.size(); ) {
+                Activity activity = activityList.remove(0);
                 if (activity != null) {
                     activity.finish();
                 }

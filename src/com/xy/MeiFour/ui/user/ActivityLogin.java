@@ -95,13 +95,13 @@ public class ActivityLogin extends ActivityBaseNoSliding implements View.OnClick
                     @Override
                     public void onError(Call call, Exception e) {
                         Log.d("xiaoyu", e.toString());
-                        ToastUtil.makeShortText("登陆失败");
+                        ToastUtil.makeShortText(getString(R.string.login_failed));
                     }
 
                     @Override
                     public void onResponse(String response) {
                         Log.d("xiaoyu", response);
-                        ToastUtil.makeShortText("登陆成功");
+                        ToastUtil.makeShortText(getString(R.string.login_successful));
                         Intent intent = new Intent(ActivityLogin.this, ActivityMain.class);
                         IntentUtils.getInstance().startActivity(ActivityLogin.this, intent);
                     }

@@ -96,12 +96,12 @@ public class ActivityRegister extends ActivityBaseWithSliding implements View.On
 
         String verCodeStr = verCode.getText().toString();
         if (TextUtils.isEmpty(verCodeStr)) {
-            ToastUtil.makeShortText("验证码不能为空");
+            ToastUtil.makeShortText(getString(R.string.vercode_not_null));
             return;
         }
         final String pwdStr = password.getText().toString();
         if (TextUtils.isEmpty(pwdStr)) {
-            ToastUtil.makeShortText("密码不能为空");
+            ToastUtil.makeShortText(getResources().getString(R.string.input_pwd));
             return;
         }
         Map<String, String> params = new HashMap<>();
@@ -117,13 +117,13 @@ public class ActivityRegister extends ActivityBaseWithSliding implements View.On
                     @Override
                     public void onError(Call call, Exception e) {
                         Log.d("xiaoyu", e.toString());
-                        ToastUtil.makeShortText("注册失败");
+                        ToastUtil.makeShortText(getString(R.string.register_failed));
                     }
 
                     @Override
                     public void onResponse(String response) {
                         Log.d("xiaoyu", response);
-                        ToastUtil.makeShortText("注册成功");
+                        ToastUtil.makeShortText(getString(R.string.register_successful));
                         finish();
                     }
                 });
@@ -150,13 +150,13 @@ public class ActivityRegister extends ActivityBaseWithSliding implements View.On
                     @Override
                     public void onError(Call call, Exception e) {
                         Log.d("xiaoyu", e.toString());
-                        ToastUtil.makeShortText("获取验证码失败");
+                        ToastUtil.makeShortText(getString(R.string.get_vercode_failed));
                     }
 
                     @Override
                     public void onResponse(String response) {
                         Log.d("xiaoyu", response);
-                        ToastUtil.makeShortText("验证码已经发送");
+                        ToastUtil.makeShortText(getString(R.string.vercode_already_send));
                         boolean clickable = getVerCode.isClickable();
                         if (clickable) {
                             getVerCode.setClickable(false);
@@ -175,7 +175,7 @@ public class ActivityRegister extends ActivityBaseWithSliding implements View.On
             getVerCode.setText(String.valueOf(currentSeconds));
             weakHandler.sendEmptyMessageDelayed(1, TimeSpan);
         } else {
-            getVerCode.setText("获取验证码");
+            getVerCode.setText(getString(R.string.get_vercode));
             getVerCode.setClickable(true);
         }
         return true;

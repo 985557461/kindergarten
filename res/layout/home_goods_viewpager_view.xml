@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res/com.xy.MeiFour"
+             android:layout_width="match_parent"
+             android:layout_height="135dp">
+    <com.xy.MeiFour.ui.view.SlideShowView
+            android:id="@+id/slideShowView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    <TextView
+            android:id="@+id/typeName"
+            android:layout_width="105dp"
+            android:layout_height="30dp"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#a6adb3"
+            android:layout_gravity="bottom"/>
+</FrameLayout>
