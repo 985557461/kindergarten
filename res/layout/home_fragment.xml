@@ -40,7 +40,7 @@
             <ImageView
                     android:layout_width="26dp"
                     android:layout_height="26dp"
-                    android:background="#ff0000"
+                    android:background="@drawable/icon_chat"
                     android:layout_gravity="center"/>
         </FrameLayout>
     </RelativeLayout>
@@ -67,7 +67,7 @@
             <ImageView
                     android:layout_width="15dp"
                     android:layout_height="15dp"
-                    android:src="#ff0000"
+                    android:src="@drawable/icon_pindao"
                     android:layout_marginRight="15dp"/>
             <TextView
                     android:layout_width="wrap_content"
@@ -89,7 +89,7 @@
             <ImageView
                     android:layout_width="15dp"
                     android:layout_height="15dp"
-                    android:src="#ff0000"
+                    android:src="@drawable/icon_search"
                     android:layout_marginRight="18dp"/>
             <TextView
                     android:layout_width="wrap_content"
@@ -109,15 +109,13 @@
             app:ptr_pull_to_fresh="false"
             app:ptr_ratio_of_header_height_to_refresh="1.2"
             app:ptr_resistance="1.7">
-        <com.xy.MeiFour.ui.view.VerticalScrollView
-                android:id="@+id/scrollView"
+        <ListView
+                android:id="@+id/listView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            <LinearLayout
-                    android:id="@+id/containerLL"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"/>
-        </com.xy.MeiFour.ui.view.VerticalScrollView>
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:cacheColorHint="#00000000"
+                android:listSelector="@null"/>
     </com.xy.MeiFour.util.ultra_pull_refresh.PtrClassicFrameLayout>
 </LinearLayout>

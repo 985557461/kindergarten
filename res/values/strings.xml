@@ -14,4 +14,5 @@
     <string name="login_failed">登陆失败</string>
     <string name="login_successful">登陆成功</string>
     <string name="today_tejia">今日特价</string>
+    <string name="data_get_failed">数据获取失败</string>
 </resources>

@@ -6,29 +6,38 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
+import android.widget.ListView;
 import com.xy.MeiFour.R;
-import com.xy.MeiFour.util.DisplayUtil;
+import com.xy.MeiFour.common_background.ServerConfig;
+import com.xy.MeiFour.util.GsonUtil;
+import com.xy.MeiFour.util.ToastUtil;
+import com.xy.MeiFour.util.okhttp.OkHttpUtils;
+import com.xy.MeiFour.util.okhttp.callback.StringCallback;
 import com.xy.MeiFour.util.ultra_pull_refresh.PtrClassicFrameLayout;
 import com.xy.MeiFour.util.ultra_pull_refresh.PtrDefaultHandler;
 import com.xy.MeiFour.util.ultra_pull_refresh.PtrFrameLayout;
 import com.xy.MeiFour.util.ultra_pull_refresh.PtrHandler;
+import okhttp3.Call;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by xiaoyu on 2016/3/22.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
     private FrameLayout rightFL;
     private LinearLayout pinDaoLL;
     private LinearLayout searchLL;
     private PtrClassicFrameLayout refreshContainer;
-    private ScrollView scrollView;
-    private LinearLayout containerLL;
+    private ListView listView;
+    private HomeHeaderView homeHeaderView;
+
+    private HomeInfoModel homeInfoModel;
+    private CategoryAdapter categoryAdapter;
 
     @Nullable
     @Override
@@ -43,48 +52,103 @@ public class HomeFragment extends Fragment {
         pinDaoLL = (LinearLayout) view.findViewById(R.id.pinDaoLL);
         searchLL = (LinearLayout) view.findViewById(R.id.searchLL);
         refreshContainer = (PtrClassicFrameLayout) view.findViewById(R.id.refreshContainer);
-        scrollView = (ScrollView) view.findViewById(R.id.scrollView);
-        containerLL = (LinearLayout) view.findViewById(R.id.containerLL);
+        listView = (ListView) view.findViewById(R.id.listView);
+
+        rightFL.setOnClickListener(this);
+        pinDaoLL.setOnClickListener(this);
+        searchLL.setOnClickListener(this);
 
         refreshContainer.setLastUpdateTimeRelateObject(this);
         refreshContainer.setPtrHandler(new PtrHandler() {
             @Override
             public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
-                return PtrDefaultHandler.checkContentCanBePulledDown(frame, scrollView, header);
+                return PtrDefaultHandler.checkContentCanBePulledDown(frame, listView, header);
             }
 
             @Override
             public void onRefreshBegin(PtrFrameLayout frame) {
-                updateViews();
-                refreshContainer.refreshComplete();
+                queryHomeInfo();
             }
         });
         refreshContainer.autoRefresh();
     }
 
-    private void updateViews() {
-        List<HomeBannerModel> homeBannerModels = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
-            HomeBannerModel homeBannerModel = new HomeBannerModel();
-            homeBannerModel.name = getActivity().getString(R.string.today_tejia);
-            List<String> images = new ArrayList<>();
-            images.add("http://p4.so.qhimg.com/t0163ac0a5a95f56379.jpg");
-            images.add("http://p0.so.qhimg.com/t01e402ff96ac76353f.jpg");
-            images.add("http://p0.so.qhimg.com/t01a1355c5dd40b826a.jpg");
-            images.add("http://p4.so.qhimg.com/t01d915f761047c31ce.jpg");
-            homeBannerModel.type = 1;
-            homeBannerModel.images = images;
+    private void queryHomeInfo() {
+        Map<String, String> params = new HashMap<>();
+        OkHttpUtils.get()
+                .params(params)
+                .url(ServerConfig.BASE_URL + ServerConfig.URL_HOME_INFO)
+                .tag(this)
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e) {
+                        refreshContainer.refreshComplete();
+                        ToastUtil.makeShortText(getActivity().getString(R.string.data_get_failed));
+                    }
 
-            homeBannerModels.add(homeBannerModel);
+                    @Override
+                    public void onResponse(String response) {
+                        homeInfoModel = GsonUtil.transModel(response, HomeInfoModel.class);
+                        refreshContainer.refreshComplete();
+                        updateViews();
+                    }
+                });
+    }
+
+    private void updateViews() {
+        if (homeInfoModel == null || !"1".equals(homeInfoModel.result)) {
+            ToastUtil.makeShortText(getActivity().getString(R.string.data_get_failed));
+            return;
+        }
+        if (homeHeaderView != null) {
+            listView.removeHeaderView(homeHeaderView);
+            homeHeaderView = null;
+        }
+        homeHeaderView = new HomeHeaderView(getActivity());
+        homeHeaderView.setData(homeInfoModel.advertising);
+        listView.addHeaderView(homeHeaderView);
+
+        categoryAdapter = new CategoryAdapter();
+        listView.setAdapter(categoryAdapter);
+        categoryAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onClick(View view) {
+
+    }
+
+    private class CategoryAdapter extends BaseAdapter {
+
+        @Override
+        public int getCount() {
+            if (homeInfoModel == null || homeInfoModel.banner_posts == null) {
+                return 0;
+            }
+            return homeInfoModel.banner_posts.size();
         }
 
-        containerLL.removeAllViews();
-        for (int i = 0; i < homeBannerModels.size(); i++) {
-            HomeGoodsViewPagerView bannerView = new HomeGoodsViewPagerView(getActivity());
-            bannerView.setData(homeBannerModels.get(i));
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            params.bottomMargin = DisplayUtil.dip2px(getActivity(), 8);
-            containerLL.addView(bannerView, params);
+        @Override
+        public Object getItem(int i) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int i) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int i, View view, ViewGroup viewGroup) {
+            HomeCategoryItemView itemView = null;
+            if (view == null) {
+                itemView = new HomeCategoryItemView(getActivity());
+            } else {
+                itemView = (HomeCategoryItemView) view;
+            }
+            itemView.setData(homeInfoModel.banner_posts.get(i));
+            return itemView;
         }
     }
 }

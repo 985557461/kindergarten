@@ -17,13 +17,13 @@
             android:layout_marginTop="40dp"/>
     <ImageView
             android:id="@+id/nameImage"
-            android:layout_width="37.33dp"
-            android:layout_height="70dp"
-            android:src="#ff0000"
-            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_meifor"
+            android:scaleType="fitCenter"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/logoImage"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="30dp"/>
     <EditText
             android:id="@+id/phoneNumber"
             android:layout_width="match_parent"

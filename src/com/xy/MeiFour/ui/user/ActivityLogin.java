@@ -14,6 +14,7 @@ import com.xy.MeiFour.ui.ActivityMain;
 import com.xy.MeiFour.ui.common.ActivityBaseNoSliding;
 import com.xy.MeiFour.util.ToastUtil;
 import com.xy.MeiFour.util.okhttp.OkHttpUtils;
+import com.xy.MeiFour.util.okhttp.PrintHttpUrlUtil;
 import com.xy.MeiFour.util.okhttp.callback.StringCallback;
 import okhttp3.Call;
 
@@ -86,6 +87,7 @@ public class ActivityLogin extends ActivityBaseNoSliding implements View.OnClick
         Map<String, String> params = new HashMap<>();
         params.put("phoneNum", phoneStr);
         params.put("password", pwdStr);
+        PrintHttpUrlUtil.printUrl(ServerConfig.BASE_URL+ServerConfig.URL_LOGIN,params);
         OkHttpUtils.post()
                 .params(params)
                 .url(ServerConfig.BASE_URL + ServerConfig.URL_LOGIN)

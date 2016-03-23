@@ -22,4 +22,5 @@ public class ServerConfig {
     public static final String URL_GET_VER_CODE = "meifor/api/accounts/register.do";
     public static final String URL_REGISTER = "meifor/api/accounts/activate.do";
     public static final String URL_LOGIN = "meifor/api/accounts/login.do";
+    public static final String URL_HOME_INFO = "meifor/api/product/queryType.do";
 }

@@ -11,49 +11,122 @@
             android:layout_weight="1"/>
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="9dp"
+            android:paddingBottom="5dp"
             android:orientation="horizontal"
+            android:gravity="center_vertical"
             android:background="#282a32">
-        <TextView
+        <!--首页-->
+        <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textColor="#ffffff"
-                android:text="首页"
+                android:orientation="vertical"
                 android:gravity="center"
-                android:textSize="14sp"/>
-        <TextView
+                android:id="@+id/homeLL">
+            <ImageView
+                    android:id="@+id/homeImageView"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/home_red"
+                    android:layout_marginBottom="5dp"/>
+            <TextView
+                    android:id="@+id/homeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@drawable/home_tab_text_selector"
+                    android:text="首页"
+                    android:textSize="14sp"/>
+        </LinearLayout>
+        <!--数据采集-->
+        <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textColor="#ffffff"
-                android:text="数据采集"
+                android:orientation="vertical"
                 android:gravity="center"
-                android:textSize="14sp"/>
-        <TextView
+                android:id="@+id/dataLL">
+            <ImageView
+                    android:id="@+id/dataImageView"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/data_white"
+                    android:layout_marginBottom="5dp"/>
+            <TextView
+                    android:id="@+id/dataTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@drawable/home_tab_text_selector"
+                    android:text="数据采集"
+                    android:textSize="14sp"/>
+        </LinearLayout>
+        <!--智能搭配-->
+        <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textColor="#ffffff"
-                android:text="智能搭配"
+                android:orientation="vertical"
                 android:gravity="center"
-                android:textSize="14sp"/>
-        <TextView
+                android:id="@+id/smartLL">
+            <ImageView
+                    android:id="@+id/smartImageView"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/smart_white"
+                    android:layout_marginBottom="5dp"/>
+            <TextView
+                    android:id="@+id/smartTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@drawable/home_tab_text_selector"
+                    android:text="智能搭配"
+                    android:textSize="14sp"/>
+        </LinearLayout>
+        <!--购物车-->
+        <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textColor="#ffffff"
-                android:text="购物车"
+                android:orientation="vertical"
                 android:gravity="center"
-                android:textSize="14sp"/>
-        <TextView
+                android:id="@+id/cartLL">
+            <ImageView
+                    android:id="@+id/cartImageView"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/car_white"
+                    android:layout_marginBottom="5dp"/>
+            <TextView
+                    android:id="@+id/cartTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@drawable/home_tab_text_selector"
+                    android:text="社区"
+                    android:textSize="14sp"/>
+        </LinearLayout>
+        <!--个人中心-->
+        <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textColor="#ffffff"
-                android:text="我的"
+                android:orientation="vertical"
                 android:gravity="center"
-                android:textSize="14sp"/>
+                android:id="@+id/myCenterLL">
+            <ImageView
+                    android:id="@+id/myCenterImageView"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/mine_white"
+                    android:layout_marginBottom="5dp"/>
+            <TextView
+                    android:id="@+id/myCenterTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@drawable/home_tab_text_selector"
+                    android:text="个人中心"
+                    android:textSize="14sp"/>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
 

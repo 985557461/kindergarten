@@ -20,6 +20,7 @@ import com.xy.MeiFour.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/**循环滑动的广告位**/
 public class SlideShowView extends FrameLayout {
 
     /**

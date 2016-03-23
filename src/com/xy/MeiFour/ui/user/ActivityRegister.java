@@ -17,6 +17,7 @@ import com.xy.MeiFour.util.CommonUtil;
 import com.xy.MeiFour.util.ToastUtil;
 import com.xy.MeiFour.util.WeakHandler;
 import com.xy.MeiFour.util.okhttp.OkHttpUtils;
+import com.xy.MeiFour.util.okhttp.PrintHttpUrlUtil;
 import com.xy.MeiFour.util.okhttp.callback.StringCallback;
 import okhttp3.Call;
 
@@ -108,6 +109,7 @@ public class ActivityRegister extends ActivityBaseWithSliding implements View.On
         params.put("phoneNumber", phoneNumberStr);
         params.put("password", pwdStr);
         params.put("activationNumber", verCodeStr);
+        PrintHttpUrlUtil.printUrl(ServerConfig.BASE_URL + ServerConfig.URL_REGISTER, params);
         OkHttpUtils.post()
                 .params(params)
                 .url(ServerConfig.BASE_URL + ServerConfig.URL_REGISTER)

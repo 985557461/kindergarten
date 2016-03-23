@@ -17,4 +17,10 @@
         <attr name="footerColor" format="color" />
         <attr name="footerTriangleHeight" format="integer" />
     </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color" format="color"/>
+        <attr name="border_overlay" format="boolean"/>
+    </declare-styleable>
 </resources>
