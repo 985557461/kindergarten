@@ -1,19 +1,23 @@
 package com.xy.MeiFour.ui.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.xy.MeiFour.R;
+import com.xy.MeiFour.right_finish.IntentUtils;
+import com.xy.MeiFour.ui.goods.ActivityGoodsList;
 
 /**
  * Created by xiaoyu on 2016/3/22.
  */
-public class HomeCategoryItemView extends FrameLayout {
+public class HomeCategoryItemView extends FrameLayout implements View.OnClickListener {
     private ImageView imageView;
     private TextView typeName;
 
@@ -40,6 +44,8 @@ public class HomeCategoryItemView extends FrameLayout {
 
         imageView = (ImageView) findViewById(R.id.imageView);
         typeName = (TextView) findViewById(R.id.typeName);
+
+        setOnClickListener(this);
     }
 
     public void setData(HomeCategoryModel homeCategoryModel) {
@@ -55,5 +61,11 @@ public class HomeCategoryItemView extends FrameLayout {
         } else {
             typeName.setText("");
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(getContext(), ActivityGoodsList.class);
+        IntentUtils.getInstance().startActivity(getContext(), intent);
     }
 }

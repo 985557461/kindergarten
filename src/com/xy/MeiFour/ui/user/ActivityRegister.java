@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import com.xy.MeiFour.R;
 import com.xy.MeiFour.common_background.ServerConfig;
+import com.xy.MeiFour.ui.common.ActivityBaseNoSliding;
 import com.xy.MeiFour.ui.common.ActivityBaseWithSliding;
 import com.xy.MeiFour.util.CommonUtil;
 import com.xy.MeiFour.util.ToastUtil;
@@ -27,7 +28,7 @@ import java.util.Map;
 /**
  * Created by xiaoyu on 2016/3/15.
  */
-public class ActivityRegister extends ActivityBaseWithSliding implements View.OnClickListener, Handler.Callback {
+public class ActivityRegister extends ActivityBaseNoSliding implements View.OnClickListener, Handler.Callback {
     private TextView location;
     private EditText phoneNumber;
     private EditText password;
@@ -48,7 +49,7 @@ public class ActivityRegister extends ActivityBaseWithSliding implements View.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register, true);
+        setContentView(R.layout.activity_register);
     }
 
     @Override

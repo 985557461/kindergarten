@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import com.xy.MeiFour.chat.WebSocketClient;
 import com.xy.MeiFour.chat.model.LoginOutModel;
 import com.xy.MeiFour.chat.model.SayModel;
+import com.xy.MeiFour.ui.common.ActivityBaseNoSliding;
 import com.xy.MeiFour.ui.common.ActivityBaseWithSliding;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
@@ -18,7 +19,7 @@ import java.util.List;
 /**
  * Created by liangyu on 2016/3/18.
  */
-public class ActivityChat extends ActivityBaseWithSliding {
+public class ActivityChat extends ActivityBaseNoSliding {
     private String TAG = "xiaoyu";
     private Gson gson = new Gson();
     private WebSocketClient client;

@@ -17,8 +17,11 @@
             android:label="@string/app_name"
             android:icon="@drawable/ic_launcher"
             android:theme="@android:style/Theme.NoTitleBar">
-
         <activity android:name="com.xy.MeiFour.ui.user.ActivityLogin"
+                  android:theme="@style/SlideAppTheme"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.xy.MeiFour.ui.ActivityMain"
                   android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait">
             <intent-filter>
@@ -26,10 +29,13 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.xy.MeiFour.ui.ActivityMain"
+        <activity android:name="com.xy.MeiFour.ui.user.ActivityRegister"
                   android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait"/>
-        <activity android:name="com.xy.MeiFour.ui.user.ActivityRegister"
+        <activity android:name=".ui.goods.ActivityGoodsList"
+                  android:theme="@style/SlideAppTheme"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".ui.goods.ActivityGoodsInfo"
                   android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait"/>
     </application>

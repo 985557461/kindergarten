@@ -1,6 +1,5 @@
-package com.xy.MeiFour.ui.home;
+package com.xy.MeiFour.ui.goods;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
@@ -12,59 +11,51 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.xy.MeiFour.R;
-import com.xy.MeiFour.ui.goods.ActivityGoodsInfo;
 import com.xy.MeiFour.util.viewflow.CircleFlowIndicator;
 import com.xy.MeiFour.util.viewflow.ViewFlow;
-
-import java.util.List;
 
 /**
  * Created by xiaoyu on 2016/3/23.
  */
-public class HomeHeaderView extends FrameLayout {
+public class GoodsListHeaderView extends FrameLayout {
     private ViewFlow viewFlow;
     private CircleFlowIndicator circleFlowIndicator;
 
-    private List<HomeBannerModel> advertising;
     private int bannerCount;
     private BannerAdapter bannerAdapter;
 
-    public HomeHeaderView(Context context) {
+    public GoodsListHeaderView(Context context) {
         super(context);
         init(context);
     }
 
-    public HomeHeaderView(Context context, AttributeSet attrs) {
+    public GoodsListHeaderView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context);
     }
 
-    public HomeHeaderView(Context context, AttributeSet attrs, int defStyle) {
+    public GoodsListHeaderView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init(context);
     }
 
     private void init(Context context) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        inflater.inflate(R.layout.home_header_view, this, true);
+        inflater.inflate(R.layout.goods_list_header_view, this, true);
 
         viewFlow = (ViewFlow) findViewById(R.id.viewFlow);
         circleFlowIndicator = (CircleFlowIndicator) findViewById(R.id.circleFlowIndicator);
         circleFlowIndicator.setStrokeColor(Color.parseColor("#bbc5dc"));
         circleFlowIndicator.setFillColor(Color.parseColor("#c9cd6f"));
         viewFlow.setFlowIndicator(circleFlowIndicator);
+
+        test();
     }
 
-    public void setData(List<HomeBannerModel> advertising) {
-        this.advertising = advertising;
-        if (advertising == null || advertising.size() <= 0) {
-            viewFlow.setVisibility(View.GONE);
-            circleFlowIndicator.setVisibility(View.GONE);
-            return;
-        }
+    public void test() {
         viewFlow.setVisibility(View.VISIBLE);
         circleFlowIndicator.setVisibility(View.VISIBLE);
-        bannerCount = advertising.size();
+        bannerCount = 4;
         bannerAdapter = new BannerAdapter();
         viewFlow.setAdapter(bannerAdapter);
         if (bannerAdapter.getCount() > 1) {
@@ -101,13 +92,11 @@ public class HomeHeaderView extends FrameLayout {
             } else {
                 bannerImageView = (BannerImageView) view;
             }
-            bannerImageView.setData(advertising.get(i % bannerCount));
             return bannerImageView;
         }
     }
 
-    private static class BannerImageView extends ImageView implements View.OnClickListener{
-        private HomeBannerModel homeBannerModel;
+    private static class BannerImageView extends ImageView implements OnClickListener{
 
         public BannerImageView(Context context) {
             super(context);
@@ -129,19 +118,17 @@ public class HomeHeaderView extends FrameLayout {
             setScaleType(ScaleType.CENTER_CROP);
             setLayoutParams(params);
             setOnClickListener(this);
+
+            setData();
         }
 
-        public void setData(HomeBannerModel homeBannerModel) {
-            this.homeBannerModel = homeBannerModel;
-            if(homeBannerModel == null){
-                return;
-            }
-            Glide.with(getContext()).load(homeBannerModel.imageurl).into(this);
+        public void setData() {
+            Glide.with(getContext()).load("http://blog.linkshop.com.cn/u/anchen/upload/627590344.jpg").into(this);
         }
 
         @Override
         public void onClick(View view) {
-            ActivityGoodsInfo.open((Activity)getContext());
+
         }
     }
 }

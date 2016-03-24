@@ -76,13 +76,13 @@ public class TitleFlowIndicator extends TextView implements FlowIndicator {
 		// Retrieve styles attributs
 		TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.TitleFlowIndicator);
 		// Retrieve the colors to be used for this view and apply them.
-		int footerColor = a.getColor(R.styleable.TitleFlowIndicator_footerColor, FOOTER_COLOR);
-		footerLineHeight = a.getInt(R.styleable.TitleFlowIndicator_footerLineHeight, FOOTER_LINE_HEIGHT);
-		footerTriangleHeight = a.getInt(R.styleable.TitleFlowIndicator_footerTriangleHeight, FOOTER_TRIANGLE_HEIGHT);
-		int selectedColor = a.getColor(R.styleable.TitleFlowIndicator_selectedColor, SELECTED_COLOR);
+		int footerColor = a.getColor(R.styleable.TitleFlowIndicator_footerColor2, FOOTER_COLOR);
+		footerLineHeight = a.getInt(R.styleable.TitleFlowIndicator_footerLineHeight2, FOOTER_LINE_HEIGHT);
+		footerTriangleHeight = a.getInt(R.styleable.TitleFlowIndicator_footerTriangleHeight2, FOOTER_TRIANGLE_HEIGHT);
+		int selectedColor = a.getColor(R.styleable.TitleFlowIndicator_selectedColor2, SELECTED_COLOR);
 		int textColor = a.getColor(R.styleable.TitleFlowIndicator_textColor, TEXT_COLOR);
 		float textSize = a.getFloat(R.styleable.TitleFlowIndicator_textSize, TEXT_SIZE);
-		titlePadding = a.getInt(R.styleable.TitleFlowIndicator_titlePadding, TITLE_PADDING);
+		titlePadding = a.getInt(R.styleable.TitleFlowIndicator_titlePadding2, TITLE_PADDING);
 		initDraw(textColor, textSize, selectedColor, footerLineHeight, footerColor);
 	}
 

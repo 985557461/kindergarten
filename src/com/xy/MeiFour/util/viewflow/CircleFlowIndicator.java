@@ -62,12 +62,12 @@ public class CircleFlowIndicator extends View implements FlowIndicator {
 		TypedArray a = context.obtainStyledAttributes(attrs,
 				R.styleable.CircleFlowIndicator);
 		// Retrieve the colors to be used for this view and apply them.
-		int fillColor = a.getColor(R.styleable.CircleFlowIndicator_fillColor,
+		int fillColor = a.getColor(R.styleable.CircleFlowIndicator_fillColor2,
 				0xFFFFFFFF);
 		int strokeColor = a.getColor(
-				R.styleable.CircleFlowIndicator_strokeColor, 0xFFFFFFFF);
+				R.styleable.CircleFlowIndicator_strokeColor2, 0xFFFFFFFF);
 		// Retrieve the radius
-		radius = a.getInt(R.styleable.CircleFlowIndicator_radius, 4);
+		radius = a.getInt(R.styleable.CircleFlowIndicator_radius2, 4);
 		initColors(fillColor, strokeColor);
 	}
 
