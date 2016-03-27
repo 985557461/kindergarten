@@ -15,21 +15,12 @@
             app:ptr_pull_to_fresh="false"
             app:ptr_ratio_of_header_height_to_refresh="1.2"
             app:ptr_resistance="1.7">
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center_horizontal">
-            <GridView
-                    android:id="@+id/gridView"
+        <FrameLayout android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:divider="@null"
-                    android:horizontalSpacing="5dp"
-                    android:verticalSpacing="5dp"
-                    android:cacheColorHint="#00000000"
-                    android:numColumns="2"
-                    android:listSelector="@null"/>
-        </LinearLayout>
+                    android:layout_height="match_parent"/>
+        </FrameLayout>
     </com.xy.MeiFour.util.ultra_pull_refresh.PtrClassicFrameLayout>
 </LinearLayout>

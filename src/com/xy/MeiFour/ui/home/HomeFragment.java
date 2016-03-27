@@ -107,6 +107,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         }
         homeHeaderView = new HomeHeaderView(getActivity());
         homeHeaderView.setData(homeInfoModel.advertising);
+        homeHeaderView.setEventParent(refreshContainer);
         listView.addHeaderView(homeHeaderView);
 
         categoryAdapter = new CategoryAdapter();

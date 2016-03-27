@@ -23,5 +23,9 @@
     <orderEntry type="library" name="okhttp-2.5.0" level="project" />
     <orderEntry type="library" name="okhttp-2.7.0" level="project" />
     <orderEntry type="library" name="okhttp-3.2.0" level="project" />
+    <orderEntry type="library" name="android-support-v7-appcompat" level="project" />
+    <orderEntry type="library" name="android-support-v7-gridlayout" level="project" />
+    <orderEntry type="library" name="android-support-v7-mediarouter" level="project" />
+    <orderEntry type="library" name="android-support-v7-recyclerview" level="project" />
   </component>
 </module>

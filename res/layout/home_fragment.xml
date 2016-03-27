@@ -99,7 +99,7 @@
                     android:textColor="#6d6d70"/>
         </LinearLayout>
     </LinearLayout>
-    <com.xy.MeiFour.util.ultra_pull_refresh.PtrClassicFrameLayout
+    <com.xy.MeiFour.util.ultra_pull_refresh.FixRequestDisallowTouchEventPtrFrameLayout
             android:id="@+id/refreshContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -117,5 +117,5 @@
                 android:dividerHeight="0dp"
                 android:cacheColorHint="#00000000"
                 android:listSelector="@null"/>
-    </com.xy.MeiFour.util.ultra_pull_refresh.PtrClassicFrameLayout>
+    </com.xy.MeiFour.util.ultra_pull_refresh.FixRequestDisallowTouchEventPtrFrameLayout>
 </LinearLayout>

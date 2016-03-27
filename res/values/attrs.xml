@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="ViewFlow">
-        <attr name="sidebuffer" format="integer" />
+        <attr name="sidebuffer" format="integer"/>
     </declare-styleable>
     <declare-styleable name="CircleFlowIndicator">
-        <attr name="fillColor2" format="color" />
-        <attr name="strokeColor2" format="color" />
-        <attr name="radius2" format="integer" />
+        <attr name="fillColor2" format="color"/>
+        <attr name="strokeColor2" format="color"/>
+        <attr name="radius2" format="integer"/>
     </declare-styleable>
     <declare-styleable name="TitleFlowIndicator">
-        <attr name="titlePadding2" format="integer" />
-        <attr name="selectedColor2" format="color" />
-        <attr name="textColor" format="color" />
-        <attr name="textSize" format="float" />
-        <attr name="footerLineHeight2" format="integer" />
-        <attr name="footerColor2" format="color" />
-        <attr name="footerTriangleHeight2" format="integer" />
+        <attr name="titlePadding2" format="integer"/>
+        <attr name="selectedColor2" format="color"/>
+        <attr name="textColor" format="color"/>
+        <attr name="textSize" format="float"/>
+        <attr name="footerLineHeight2" format="integer"/>
+        <attr name="footerColor2" format="color"/>
+        <attr name="footerTriangleHeight2" format="integer"/>
     </declare-styleable>
 
     <declare-styleable name="CircleImageView">
@@ -23,4 +23,9 @@
         <attr name="border_color" format="color"/>
         <attr name="border_overlay" format="boolean"/>
     </declare-styleable>
+
+    <item name="id_stickynavlayout_topview" type="id"/>
+    <item name="id_stickynavlayout_indicator" type="id"/>
+    <item name="id_stickynavlayout_viewpager" type="id"/>
+    <item name="id_stickynavlayout_innerscrollview" type="id"/>
 </resources>

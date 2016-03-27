@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res/com.xy.MeiFour"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/background_color">
+              android:background="#f7faf7">
     <!--title-->
     <RelativeLayout
             android:layout_width="match_parent"
@@ -45,22 +44,55 @@
                     android:layout_gravity="center"/>
         </FrameLayout>
     </RelativeLayout>
-    <com.xy.MeiFour.util.viewpager_indicator.TitlePageIndicator
-            android:id="@+id/indicator"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="#18FF0000"
-            android:padding="10dip"
-            android:textColor="#AA000000"
-            app:footerColor="#FFAA2222"
-            app:footerIndicatorHeight="3dp"
-            app:footerIndicatorStyle="underline"
-            app:footerLineHeight="1dp"
-            app:selectedBold="true"
-            app:selectedColor="#FF000000"/>
-    <android.support.v4.view.ViewPager
-            android:id="@+id/viewPager"
+    <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-    </android.support.v4.view.ViewPager>
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/blue_stroken_gray_bg_shape"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
+        <TextView
+                android:id="@+id/zongHe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="综合"
+                android:textSize="15sp"
+                android:textColor="@drawable/home_tab_text_selector"
+                android:layout_weight="1"/>
+        <TextView
+                android:id="@+id/xiaoLiang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="销量"
+                android:textSize="15sp"
+                android:textColor="@drawable/home_tab_text_selector"
+                android:layout_weight="1"/>
+        <TextView
+                android:id="@+id/zuiXin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="最新"
+                android:textSize="15sp"
+                android:textColor="@drawable/home_tab_text_selector"
+                android:layout_weight="1"/>
+        <TextView
+                android:id="@+id/jiaGe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="价格"
+                android:textSize="15sp"
+                android:textColor="@drawable/home_tab_text_selector"
+                android:layout_weight="1"/>
+    </LinearLayout>
+    <com.xy.MeiFour.ui.goods.list.GoodsListView
+            android:id="@+id/zongHeListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 </LinearLayout>

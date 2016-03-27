@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.xy.MeiFour.R;
 import com.xy.MeiFour.right_finish.IntentUtils;
-import com.xy.MeiFour.ui.goods.ActivityGoodsList;
+import com.xy.MeiFour.ui.goods.list.ActivityGoodsList;
 
 /**
  * Created by xiaoyu on 2016/3/22.

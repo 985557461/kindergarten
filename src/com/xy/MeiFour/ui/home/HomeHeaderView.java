@@ -2,32 +2,33 @@ package com.xy.MeiFour.ui.home;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.xy.MeiFour.R;
-import com.xy.MeiFour.ui.goods.ActivityGoodsInfo;
-import com.xy.MeiFour.util.viewflow.CircleFlowIndicator;
-import com.xy.MeiFour.util.viewflow.ViewFlow;
+import com.xy.MeiFour.ui.goods.web.ActivityGoodsInfoWeb;
+import com.xy.MeiFour.util.viewpager_indicator.CirclePageIndicator;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by xiaoyu on 2016/3/23.
  */
 public class HomeHeaderView extends FrameLayout {
-    private ViewFlow viewFlow;
-    private CircleFlowIndicator circleFlowIndicator;
+    private HomeBannerViewPager viewPager;
+    private CirclePageIndicator circlePageIndicator;
 
     private List<HomeBannerModel> advertising;
     private int bannerCount;
     private BannerAdapter bannerAdapter;
+    private List<BannerImageView> bannerImageViews = new ArrayList<>();
 
     public HomeHeaderView(Context context) {
         super(context);
@@ -48,65 +49,63 @@ public class HomeHeaderView extends FrameLayout {
         LayoutInflater inflater = LayoutInflater.from(context);
         inflater.inflate(R.layout.home_header_view, this, true);
 
-        viewFlow = (ViewFlow) findViewById(R.id.viewFlow);
-        circleFlowIndicator = (CircleFlowIndicator) findViewById(R.id.circleFlowIndicator);
-        circleFlowIndicator.setStrokeColor(Color.parseColor("#bbc5dc"));
-        circleFlowIndicator.setFillColor(Color.parseColor("#c9cd6f"));
-        viewFlow.setFlowIndicator(circleFlowIndicator);
+        viewPager = (HomeBannerViewPager) findViewById(R.id.viewPager);
+        circlePageIndicator = (CirclePageIndicator) findViewById(R.id.circlePageIndicator);
+    }
+
+    public void setEventParent(ViewGroup viewGroup){
+        viewPager.setNestParent(viewGroup);
     }
 
     public void setData(List<HomeBannerModel> advertising) {
         this.advertising = advertising;
         if (advertising == null || advertising.size() <= 0) {
-            viewFlow.setVisibility(View.GONE);
-            circleFlowIndicator.setVisibility(View.GONE);
+            viewPager.setVisibility(View.GONE);
+            circlePageIndicator.setVisibility(View.GONE);
             return;
         }
-        viewFlow.setVisibility(View.VISIBLE);
-        circleFlowIndicator.setVisibility(View.VISIBLE);
+        viewPager.setVisibility(View.VISIBLE);
+        circlePageIndicator.setVisibility(View.VISIBLE);
         bannerCount = advertising.size();
-        bannerAdapter = new BannerAdapter();
-        viewFlow.setAdapter(bannerAdapter);
-        if (bannerAdapter.getCount() > 1) {
-            viewFlow.setSelection(bannerCount * 3000);
-            viewFlow.setTimeSpan(4500);
-            viewFlow.startAutoFlowTimer();
-        } else {
-            viewFlow.stopAutoFlowTimer();
-            circleFlowIndicator.setVisibility(View.GONE);
+        for (int i = 0; i < bannerCount; i++) {
+            BannerImageView bannerImageView = new BannerImageView(getContext());
+            bannerImageView.setData(advertising.get(i));
+            bannerImageViews.add(bannerImageView);
         }
+        bannerAdapter = new BannerAdapter();
+        viewPager.setAdapter(bannerAdapter);
+        circlePageIndicator.setViewPager(viewPager);
     }
 
-    private class BannerAdapter extends BaseAdapter {
+    private class BannerAdapter extends PagerAdapter {
         @Override
         public int getCount() {
-            return Integer.MAX_VALUE;
+            return advertising.size();
         }
 
         @Override
-        public Object getItem(int i) {
-            return null;
+        public boolean isViewFromObject(View view, Object o) {
+            return view == o;
         }
 
         @Override
-        public long getItemId(int i) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int i, View view, ViewGroup viewGroup) {
-            BannerImageView bannerImageView = null;
-            if (view == null) {
-                bannerImageView = new BannerImageView(getContext());
-            } else {
-                bannerImageView = (BannerImageView) view;
+        public Object instantiateItem(ViewGroup container, int position) {
+            BannerImageView imageView = bannerImageViews.get(position);
+            if (imageView.getParent() != null) {
+                container.removeView(imageView);
             }
-            bannerImageView.setData(advertising.get(i % bannerCount));
-            return bannerImageView;
+            container.addView(imageView);
+            return imageView;
         }
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+            container.removeView(bannerImageViews.get(position));
+        }
+
     }
 
-    private static class BannerImageView extends ImageView implements View.OnClickListener{
+    private static class BannerImageView extends ImageView implements View.OnClickListener {
         private HomeBannerModel homeBannerModel;
 
         public BannerImageView(Context context) {
@@ -133,7 +132,7 @@ public class HomeHeaderView extends FrameLayout {
 
         public void setData(HomeBannerModel homeBannerModel) {
             this.homeBannerModel = homeBannerModel;
-            if(homeBannerModel == null){
+            if (homeBannerModel == null) {
                 return;
             }
             Glide.with(getContext()).load(homeBannerModel.imageurl).into(this);
@@ -141,7 +140,7 @@ public class HomeHeaderView extends FrameLayout {
 
         @Override
         public void onClick(View view) {
-            ActivityGoodsInfo.open((Activity)getContext());
+            ActivityGoodsInfoWeb.open((Activity) getContext());
         }
     }
 }

@@ -25,18 +25,22 @@
                   android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+            <action android:name="android.intent.action.MAIN"/>
+            <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity android:name="com.xy.MeiFour.ui.user.ActivityRegister"
                   android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait"/>
-        <activity android:name=".ui.goods.ActivityGoodsList"
+        <activity android:name=".ui.goods.list.ActivityGoodsList"
                   android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait"/>
-        <activity android:name=".ui.goods.ActivityGoodsInfo"
+        <activity android:name=".ui.goods.web.ActivityGoodsInfoWeb"
                   android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait"/>
+        <activity android:name=".ui.goods.local.ActivityGoodsInfoLocal"
+                  android:theme="@style/SlideAppTheme"
+                  android:screenOrientation="portrait">
+        </activity>
     </application>
 </manifest>

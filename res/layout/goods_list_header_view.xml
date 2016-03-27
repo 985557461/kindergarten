@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res/com.xy.MeiFour"
-              android:orientation="vertical"
-              android:gravity="center"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content">
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                 xmlns:app="http://schemas.android.com/apk/res/com.xy.MeiFour"
-                 android:layout_width="match_parent"
-                 android:layout_height="135dp">
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:background="#ffffff">
         <com.xy.MeiFour.util.viewflow.ViewFlow
                 android:id="@+id/viewFlow"
                 android:layout_width="match_parent"
@@ -22,4 +21,6 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginRight="40dp"/>
     </FrameLayout>
+    <View android:layout_width="match_parent"
+          android:layout_height="10dp"/>
 </LinearLayout>

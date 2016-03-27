@@ -1,4 +1,4 @@
-package com.xy.MeiFour.ui.goods;
+package com.xy.MeiFour.ui.goods.web;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,11 +15,11 @@ import com.xy.MeiFour.ui.common.ActivityBaseNoSliding;
 /**
  * Created by xiaoyu on 2016/3/24.
  */
-public class ActivityGoodsInfo extends ActivityBaseNoSliding{
+public class ActivityGoodsInfoWeb extends ActivityBaseNoSliding{
     private WebView webview;
 
     public static void open(Activity activity){
-        Intent intent = new Intent(activity,ActivityGoodsInfo.class);
+        Intent intent = new Intent(activity,ActivityGoodsInfoWeb.class);
         activity.startActivity(intent);
     }
 

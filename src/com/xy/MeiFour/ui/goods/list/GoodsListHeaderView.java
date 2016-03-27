@@ -1,4 +1,4 @@
-package com.xy.MeiFour.ui.goods;
+package com.xy.MeiFour.ui.goods.list;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -7,17 +7,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.xy.MeiFour.R;
+import com.xy.MeiFour.util.recyclerview.RecyclerViewHeader;
 import com.xy.MeiFour.util.viewflow.CircleFlowIndicator;
 import com.xy.MeiFour.util.viewflow.ViewFlow;
 
 /**
  * Created by xiaoyu on 2016/3/23.
  */
-public class GoodsListHeaderView extends FrameLayout {
+public class GoodsListHeaderView extends RecyclerViewHeader {
     private ViewFlow viewFlow;
     private CircleFlowIndicator circleFlowIndicator;
 
