@@ -4,7 +4,8 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/background_color">
+              android:paddingBottom="9dp"
+              android:background="#efeff4">
     <com.xy.MeiFour.util.ultra_pull_refresh.PtrClassicFrameLayout
             android:id="@+id/refreshContainer"
             android:layout_width="match_parent"
@@ -16,7 +17,9 @@
             app:ptr_ratio_of_header_height_to_refresh="1.2"
             app:ptr_resistance="1.7">
         <FrameLayout android:layout_width="match_parent"
-                     android:layout_height="match_parent">
+                     android:layout_height="match_parent"
+                     android:paddingLeft="8dp"
+                     android:paddingRight="8dp">
             <android.support.v7.widget.RecyclerView
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"

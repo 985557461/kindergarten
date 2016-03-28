@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="31dp">
-            <com.xy.MeiFour.ui.view.CircleImageView
+            <com.xy.MeiFour.util.round_image.CircleImageView
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:src="#f5a9a7"
@@ -63,7 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="31dp">
-            <com.xy.MeiFour.ui.view.CircleImageView
+            <com.xy.MeiFour.util.round_image.CircleImageView
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:src="#f3c550"
@@ -81,7 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="31dp">
-            <com.xy.MeiFour.ui.view.CircleImageView
+            <com.xy.MeiFour.util.round_image.CircleImageView
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:src="#f497bf"
@@ -98,7 +98,7 @@
         <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-            <com.xy.MeiFour.ui.view.CircleImageView
+            <com.xy.MeiFour.util.round_image.CircleImageView
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:src="#e49af4"

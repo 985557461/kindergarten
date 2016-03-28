@@ -9,10 +9,11 @@
     <file url="file://$PROJECT_DIR$/res/layout/layout_slideshow.xml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/xy/MeiFour/ui/goods/list/ActivityGoodsList.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/xy/MeiFour/ui/goods/local/StickyNavLayoutForGoodsInfo.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/xy/MeiFour/ui/view/CircleImageView.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/xy/MeiFour/ui/view/StickyScrollView.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/DisplayUtil.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/recyclerview/RecyclerViewHeader.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/round_image/CircleImageView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/xy/MeiFour/util/round_image/RoundImageView.java" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>

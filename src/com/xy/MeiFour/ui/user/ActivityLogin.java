@@ -106,6 +106,7 @@ public class ActivityLogin extends ActivityBaseNoSliding implements View.OnClick
                         ToastUtil.makeShortText(getString(R.string.login_successful));
                         Intent intent = new Intent(ActivityLogin.this, ActivityMain.class);
                         IntentUtils.getInstance().startActivity(ActivityLogin.this, intent);
+                        finish();
                     }
                 });
     }

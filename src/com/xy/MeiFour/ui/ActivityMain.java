@@ -76,6 +76,7 @@ public class ActivityMain extends ActivityBaseNoSliding implements View.OnClickL
 
     @Override
     protected void initViews() {
+        homeTextView.setSelected(true);
         setDefaultFragment();
     }
 

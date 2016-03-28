@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide;
 import com.xy.MeiFour.R;
 import com.xy.MeiFour.right_finish.IntentUtils;
 import com.xy.MeiFour.ui.goods.list.ActivityGoodsList;
+import com.xy.MeiFour.util.glide.GlideRoundTransform;
 
 /**
  * Created by xiaoyu on 2016/3/22.
@@ -55,6 +56,8 @@ public class HomeCategoryItemView extends FrameLayout implements View.OnClickLis
         }
         if (!TextUtils.isEmpty(homeCategoryModel.imageurl)) {
             Glide.with(getContext()).load(homeCategoryModel.imageurl).into(imageView);
+        }else{
+            Glide.with(getContext()).load("").into(imageView);
         }
         if (!TextUtils.isEmpty(homeCategoryModel.typename)) {
             typeName.setText(homeCategoryModel.typename);

@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res/com.xy.MeiFour"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:orientation="vertical">
+              android:orientation="vertical"
+              android:paddingLeft="8dp"
+              android:paddingRight="8dp">
     <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="135dp">
-        <ImageView
+            android:layout_height="wrap_content">
+        <com.xy.MeiFour.util.round_image.RoundImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"/>
+                android:layout_height="168dp"
+                android:scaleType="centerCrop"
+                app:type="round"
+                app:borderRadius="10dp"/>
         <TextView
                 android:id="@+id/typeName"
                 android:layout_width="105dp"
@@ -18,9 +23,9 @@
                 android:textColor="#ffffff"
                 android:textSize="13sp"
                 android:gravity="center"
-                android:background="#a6adb3"
+                android:background="@drawable/home_type_name_shape"
                 android:layout_gravity="bottom"/>
     </FrameLayout>
     <View android:layout_width="match_parent"
-          android:layout_height="8dp"/>
+          android:layout_height="10dp"/>
 </LinearLayout>

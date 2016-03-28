@@ -1,7 +1,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="#ffffff"
+    <item android:color="#949494"
           android:state_selected="false"/>
 
-    <item android:color="#b13234"
+    <item android:color="#ff2d47"
           android:state_selected="true"/>
 </selector>
