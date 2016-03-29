@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.xy.MeiFour.R;
+import com.xy.MeiFour.ui.cart.CartFragment;
 import com.xy.MeiFour.ui.common.ActivityBaseNoSliding;
 import com.xy.MeiFour.ui.dapei.DaPeiFragment;
 import com.xy.MeiFour.ui.home.HomeFragment;
@@ -22,6 +23,7 @@ public class ActivityMain extends ActivityBaseNoSliding implements View.OnClickL
 
     private HomeFragment homeFragment;
     private DaPeiFragment daPeiFragment;
+    private CartFragment cartFragment;
 
     /**
      * views*
@@ -189,6 +191,11 @@ public class ActivityMain extends ActivityBaseNoSliding implements View.OnClickL
                 smartTextView.setSelected(false);
                 cartTextView.setSelected(true);
                 myCenterTextView.setSelected(false);
+
+                if (cartFragment == null) {
+                    cartFragment = new CartFragment();
+                }
+                switchContent(mFragmentCurrent, cartFragment);
             }
             break;
             case 4: {

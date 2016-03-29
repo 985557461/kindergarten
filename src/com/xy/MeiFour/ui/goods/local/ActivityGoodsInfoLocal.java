@@ -11,20 +11,21 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.*;
+import com.alibaba.sdk.android.AlibabaSDK;
+import com.alibaba.sdk.android.trade.TradeConstants;
+import com.alibaba.sdk.android.trade.TradeService;
+import com.alibaba.sdk.android.trade.callback.TradeProcessCallback;
+import com.alibaba.sdk.android.trade.model.TaokeParams;
+import com.alibaba.sdk.android.trade.model.TradeResult;
+import com.alibaba.sdk.android.trade.page.ItemDetailPage;
 import com.bumptech.glide.Glide;
 import com.xy.MeiFour.R;
 import com.xy.MeiFour.ui.common.ActivityBaseNoSliding;
-import com.xy.MeiFour.ui.goods.web.ActivityGoodsInfoWeb;
 import com.xy.MeiFour.util.DisplayUtil;
 import com.xy.MeiFour.util.viewpager_indicator.CirclePageIndicator;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by xiaoyu on 2016/3/27.
@@ -197,7 +198,7 @@ public class ActivityGoodsInfoLocal extends ActivityBaseNoSliding implements Vie
                 finish();
                 break;
             case R.id.goToTaoBao:
-                ActivityGoodsInfoWeb.open(this);
+                goToTaoBaoView();
                 break;
             case R.id.jieShaoFL:
                 jieShaoLine.setVisibility(View.VISIBLE);
@@ -210,6 +211,25 @@ public class ActivityGoodsInfoLocal extends ActivityBaseNoSliding implements Vie
                 contentViewPager.setCurrentItem(1);
                 break;
         }
+    }
+
+    public void goToTaoBaoView() {
+        TradeService tradeService = AlibabaSDK.getService(TradeService.class);
+        Map<String, String> exParams = new HashMap<>();
+        exParams.put(TradeConstants.ITEM_DETAIL_VIEW_TYPE, TradeConstants.TAOBAO_NATIVE_VIEW);
+        ItemDetailPage itemDetailPage = new ItemDetailPage("526384981338", exParams);
+        TaokeParams taokeParams = new TaokeParams();
+        tradeService.show(itemDetailPage, null, this, null, new TradeProcessCallback() {
+            @Override
+            public void onFailure(int code, String msg) {
+
+            }
+
+            @Override
+            public void onPaySuccess(TradeResult tradeResult) {
+
+            }
+        });
     }
 
     @Override

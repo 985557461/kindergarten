@@ -1,6 +1,8 @@
 package com.xy.MeiFour.ui;
 
 import android.app.Application;
+import com.alibaba.sdk.android.AlibabaSDK;
+import com.alibaba.sdk.android.callback.InitResultCallback;
 import com.xy.MeiFour.common_background.Account;
 
 /**
@@ -14,6 +16,17 @@ public class CustomApplication extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
+
+        AlibabaSDK.asyncInit(this, new InitResultCallback() {
+
+            @Override
+            public void onSuccess() {
+            }
+
+            @Override
+            public void onFailure(int code, String message) {
+            }
+        });
     }
 
     public static CustomApplication getInstance() {

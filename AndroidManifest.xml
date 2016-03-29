@@ -9,6 +9,25 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
+    <!--阿里百川 开始-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <!--阿里百川 结束-->
+
     <meta-data android:name="com.xy.MeiFour.util.glide.GlideConfiguration"
                android:value="GlideModule"/>
 
@@ -35,5 +54,70 @@
         <activity android:name=".ui.goods.local.ActivityGoodsInfoLocal"
                   android:screenOrientation="portrait">
         </activity>
+
+
+        <!--阿里百川相关  开始-->
+        <activity android:name="com.alibaba.sdk.android.login.ui.LoginWebViewActivity"/>
+        <activity android:name="com.alibaba.sdk.android.login.ui.QrLoginConfirmActivity"/>
+        <activity android:name="com.alibaba.sdk.android.login.ui.QrLoginActivity" android:theme="@style/tae_sdk_login_qr_activity_style"/>
+        <activity android:name="com.alibaba.sdk.android.webview.BaseWebViewActivity"/>
+        <activity android:name="com.alibaba.sdk.android.webview.feedback.FeedbackActivity" android:theme="@style/feedback_title">
+        </activity>
+        <activity android:name="com.alibaba.sdk.android.webview.feedback.SendFeedbackActivity" android:theme="@style/feedback_title">
+        </activity>
+        <receiver android:exported="false" android:name="com.alibaba.sdk.android.hotpatch.HotPatchBroadcastReceiver" android:process=":hotpatch">
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.hotpatch.action.HOT_PATCH"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.alibaba.sdk.android.trade.ui.TradeWebViewActivity">
+            <intent-filter>
+                <action android:name="COM_TAOBAO_TAE_SDK_TRADE_WEB_VIEW_ACTION"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTask" android:name="com.alibaba.sdk.android.trade.ui.NativeTaobaoClientActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="23334534.nativeTaobao" android:scheme="alisdk"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|keyboardHidden|navigation" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <activity android:configChanges="orientation|keyboardHidden|navigation" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="behind">
+        </activity>
+        <!--android:icon="@drawable/aliwx_head_default"-->
+        <!--android:label="@string/aliwx_app_name" >-->
+        <!--聊天窗口-->
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.alibaba.mobileim.ui.WxChattingActvity" android:screenOrientation="portrait" android:theme="@style/Aliwx_ChattingDetailStyle_default" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <!--最近会话列表-->
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.alibaba.mobileim.ui.WxConversationActivity" android:screenOrientation="portrait" android:theme="@style/Aliwx_ConverationStyle_default"/>
+        <!--多图查看窗口-->
+        <activity android:hardwareAccelerated="false" android:launchMode="singleTop" android:name="com.alibaba.mobileim.ui.chat.MultiImageActivity" android:screenOrientation="sensor" android:theme="@style/Aliwx_ContentOverlay_default" android:windowSoftInputMode="adjustPan"/>
+        <activity android:hardwareAccelerated="false" android:launchMode="singleTop" android:name="com.alibaba.mobileim.kit.imageviewer.ShowImageActivity" android:screenOrientation="portrait" android:theme="@style/Aliwx_ContentOverlay_default" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.alibaba.mobileim.ui.multi.lightservice.MultiPickGalleryActivity" android:screenOrientation="portrait" android:theme="@style/Aliwx_ConverationStyle_default"/>
+        <!--反馈窗口-->
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.alibaba.mobileim.ui.FeedbackActvity" android:screenOrientation="portrait" android:theme="@style/Aliwx_Theme.Translucent" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <!--漫游密码输入，三方用户不需要这个Activity-->
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.alibaba.mobileim.kit.CloudPwdSettingHintActivity" android:screenOrientation="portrait" android:theme="@style/Aliwx_ConverationStyle_default"/>
+        <!--交易组件跳转窗口，即点击旺旺水滴跳OpenIM窗口-->
+        <activity android:name="com.alibaba.mobileim.login.WaitProgresssActivity"/>
+        <!--@消息相关-->
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.alibaba.mobileim.ui.atmessage.AtMsgListActivity" android:screenOrientation="portrait" android:theme="@style/Aliwx_ConverationStyle_default"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.alibaba.mobileim.ui.atmessage.SendAtMessageDetailActivity" android:screenOrientation="portrait" android:theme="@style/Aliwx_ConverationStyle_default"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.alibaba.mobileim.kit.chat.SelectTribeMemberActivity" android:screenOrientation="portrait" android:theme="@style/Aliwx_ConverationStyle_default" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.alibaba.mobileim.kit.chat.EnlargeChattingTextActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:exported="true" android:launchMode="singleInstance" android:name="com.alibaba.tcms.service.MonitorActivity" android:process=":TcmsService" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:name="com.alibaba.wxlib.util.RequestPermissionActivity" android:theme="@style/Aliwx_Theme.Translucent"/>
+        <!--故障诊断-->
+        <service android:exported="false" android:name="com.alibaba.mobileim.appmonitor.tiptool.TooltipService"/>
+        <!--数据通道-->
+        <service android:exported="true" android:name="com.alibaba.tcms.service.TCMSService" android:process=":TcmsService"/>
+        <!-- 用于接收从TCMSService发送的命令 -->
+        <service android:exported="true" android:name="com.alibaba.tcms.service.ListenerService"/>
+        <!--阿里百川相关  结束-->
     </application>
 </manifest>
