@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="alisdk-hotpatch-3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/alisdk-hotpatch-3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,12 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="GBK">
+    <file url="file://$PROJECT_DIR$/libs/IMCore-1.9.7.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/IMKit-1.9.7.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/alipaySingle-20160223.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/alisdk-alipay-3.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/alisdk-hotpatch-3.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/alisdk-kernel-2.1.0.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/alisdk-kernel-base-2.1.0.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/alisdk-login-9.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/alisdk-rpc-3.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/alisdk-security-8.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/alisdk-system-15.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/alisdk-tlog-1.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/alisdk-trade-12.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/alisdk-ui-7.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/alisdk-upload-1.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/alisdk-ut-5.jar" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/libs/android-support-v7-recyclerview.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/armeabi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/armeabi-v7a" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/sdk-legacy-support-2.1.0.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/securityguard-3.1.27.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/utdid4all-1.0.4.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/x86" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/anim" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/color" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-hdpi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-ldpi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-mdpi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-xhdpi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-xxhdpi" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/res/drawable-xxhdpi/icon_default.jpg" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/res/drawable-xxhdpi/icon_dot_blur.png" charset="GBK" />
     <file url="file://$PROJECT_DIR$/res/drawable-xxhdpi/icon_dot_focus.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/res/drawable-xxxhdpi" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/res/drawable/sticky_shadow_default.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/layout" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/res/layout/layout_slideshow.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/res/raw" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/values" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/values-w820dp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/values-w820dp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/xy/MeiFour/ui/goods/list/ActivityGoodsList.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/xy/MeiFour/ui/goods/local/StickyNavLayoutForGoodsInfo.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/xy/MeiFour/ui/view/StickyScrollView.java" charset="UTF-8" />

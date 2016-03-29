@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- trade  801-900 -->
+    <string name="alisdk_message_10008_name">GET_ORDER_URL_EXCEPTION</string>
+    <string name="alisdk_message_10008_message">生成订单地址出错, 错误信息为 {0}</string>
+    <string name="alisdk_message_10008_action">请稍后重试当前操作，若仍然出错，请反馈至论坛，技术支持或 Android SDK 开发咨询群</string>
+    <string name="alisdk_message_10008_type">E</string>
+    <string name="alisdk_message_10009_name">QUERY_ORDER_RESULT_EXCEPTION</string>
+    <string name="alisdk_message_10009_message">查询订单出错, 错误信息为 {0}</string>
+    <string name="alisdk_message_10009_action">请稍后重试当前操作，若仍然出错，请反馈至论坛，技术支持或 Android SDK 开发咨询群</string>
+    <string name="alisdk_message_10009_type">E</string>
+    <string name="alisdk_message_801_name">QUANTITY_FORMAT_ERROR</string>
+    <string name="alisdk_message_801_message">商品数量必须为整数并大于 0</string>
+    <string name="alisdk_message_801_action">请调整参数后重试当前操作</string>
+    <string name="alisdk_message_801_type">E</string>
+    <string name="alisdk_message_802_name">INVALID_TAOKE_PID_ERROR</string>
+    <string name="alisdk_message_802_message">当前传入的淘客 pid {0} 非法，正确格式应以 mm_ 为前缀</string>
+    <string name="alisdk_message_802_action">请修改传入的淘客 pid，如不确认，请联系淘客相关人员</string>
+    <string name="alisdk_message_802_type">E</string>
+    <string name="alisdk_message_803_name">INVALID_DEFAULT_TAOKE_PID</string>
+    <string name="alisdk_message_803_message">未设置默认的淘客 pid</string>
+    <string name="alisdk_message_803_action">请在初始化之前调用 TradeConfigs.defaultTaokePid="mm_****" 设置默认的淘客 pid 值, 此值会在相关方法调用时未指定 pid 时使用</string>
+    <string name="alisdk_message_803_type">W</string>
+    <string name="alisdk_message_804_name">PAY_IN_PROGRESS</string>
+    <string name="alisdk_message_804_message">使用支付宝支付失败，支付宝错误码为 8000, 含义为正在处理中</string>
+    <string name="alisdk_message_804_action">请准备订单号和支付宝错误码至旺旺支付宝移动支持群(旺旺号:移动收单daily)咨询</string>
+    <string name="alisdk_message_804_type">E</string>
+    <string name="alisdk_message_805_name">PAY_ORDER_FAILED</string>
+    <string name="alisdk_message_805_message">使用支付宝支付失败，支付宝错误码为 4000, 含义为订单支付失败</string>
+    <string name="alisdk_message_805_action">请准备订单号和支付宝错误码至旺旺支付宝移动支持群(旺旺号:移动收单daily)咨询</string>
+    <string name="alisdk_message_805_type">E</string>
+    <string name="alisdk_message_806_name">PAY_USER_CANCEL</string>
+    <string name="alisdk_message_806_message">使用支付宝支付失败，支付宝错误码为 6001, 含义为用户中途取消</string>
+    <string name="alisdk_message_806_action">请准备订单号和支付宝错误码至旺旺支付宝移动支持群(旺旺号:移动收单daily)咨询</string>
+    <string name="alisdk_message_806_type">E</string>
+    <string name="alisdk_message_807_name">PAY_NETWORK_FAILED</string>
+    <string name="alisdk_message_807_message">使用支付宝支付失败，支付宝错误码为 6002, 含义为网络连接出错</string>
+    <string name="alisdk_message_807_action">请准备订单号和支付宝错误码至旺旺支付宝移动支持群(旺旺号:移动收单daily)咨询</string>
+    <string name="alisdk_message_807_type">E</string>
+    <string name="alisdk_message_808_name">PAY_COMMON_ERROR</string>
+    <string name="alisdk_message_808_message">使用支付宝支付失败，支付宝错误码为 {0}</string>
+    <string name="alisdk_message_808_action">请准备订单号和支付宝错误码至旺旺支付宝移动支持群(旺旺号:移动收单daily)咨询</string>
+    <string name="alisdk_message_808_type">E</string>
+</resources>

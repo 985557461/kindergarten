@@ -14,15 +14,12 @@
 
     <application
             android:name="com.xy.MeiFour.ui.CustomApplication"
-            android:label="@string/app_name"
             android:icon="@drawable/ic_launcher"
             android:theme="@android:style/Theme.NoTitleBar">
         <activity android:name="com.xy.MeiFour.ui.user.ActivityLogin"
-                  android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait">
         </activity>
         <activity android:name="com.xy.MeiFour.ui.ActivityMain"
-                  android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -30,16 +27,12 @@
             </intent-filter>
         </activity>
         <activity android:name="com.xy.MeiFour.ui.user.ActivityRegister"
-                  android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait"/>
         <activity android:name=".ui.goods.list.ActivityGoodsList"
-                  android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait"/>
         <activity android:name=".ui.goods.web.ActivityGoodsInfoWeb"
-                  android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait"/>
         <activity android:name=".ui.goods.local.ActivityGoodsInfoLocal"
-                  android:theme="@style/SlideAppTheme"
                   android:screenOrientation="portrait">
         </activity>
     </application>

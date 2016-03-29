@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="alisdk-ui-7">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/alisdk-ui-7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

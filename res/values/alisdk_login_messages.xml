@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="alisdk_message_10015_name">USER_LOGOUT</string>
+    <string name="alisdk_message_10015_message">退出登录</string>
+    <string name="alisdk_message_10015_action"></string>
+    <string name="alisdk_message_10015_type">I</string>
+
+</resources>

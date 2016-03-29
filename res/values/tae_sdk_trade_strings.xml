@@ -1,0 +1,5 @@
+<resources>
+	<string name="com_taobao_tae_sdk_trade_confirm_progress_message">交易确认中</string>
+	<string name="com_taobao_tae_sdk_trade_title">确认下单</string>
+	<string name="com_taobao_tae_sdk_cart_title">购物车</string>
+</resources>

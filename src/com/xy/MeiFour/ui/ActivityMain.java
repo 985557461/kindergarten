@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.xy.MeiFour.R;
 import com.xy.MeiFour.ui.common.ActivityBaseNoSliding;
+import com.xy.MeiFour.ui.dapei.DaPeiFragment;
 import com.xy.MeiFour.ui.home.HomeFragment;
 import com.xy.MeiFour.util.ActivityManagerUtil;
 import com.xy.MeiFour.util.ToastUtil;
@@ -17,8 +18,10 @@ public class ActivityMain extends ActivityBaseNoSliding implements View.OnClickL
     /**
      * fragments*
      */
-    private HomeFragment homeFragment;
     private Fragment mFragmentCurrent;
+
+    private HomeFragment homeFragment;
+    private DaPeiFragment daPeiFragment;
 
     /**
      * views*
@@ -152,6 +155,7 @@ public class ActivityMain extends ActivityBaseNoSliding implements View.OnClickL
                 smartTextView.setSelected(false);
                 cartTextView.setSelected(false);
                 myCenterTextView.setSelected(false);
+
             }
             break;
             case 2: {
@@ -166,6 +170,11 @@ public class ActivityMain extends ActivityBaseNoSliding implements View.OnClickL
                 smartTextView.setSelected(true);
                 cartTextView.setSelected(false);
                 myCenterTextView.setSelected(false);
+
+                if(daPeiFragment == null){
+                    daPeiFragment = new DaPeiFragment();
+                }
+                switchContent(mFragmentCurrent,daPeiFragment);
             }
             break;
             case 3: {
@@ -224,7 +233,7 @@ public class ActivityMain extends ActivityBaseNoSliding implements View.OnClickL
         if (t - lastTime < TIME_LONG) {
             ActivityManagerUtil.getInstance().killActivity();
         } else {
-            ToastUtil.makeShortText(getString(R.string.double_back_finish));
+            ToastUtil.makeShortText("再按一次退出应用");
             lastTime = t;
             return;
         }

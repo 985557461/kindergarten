@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="alisdk-trade-12">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/alisdk-trade-12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

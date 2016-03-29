@@ -88,22 +88,22 @@ public class ActivityRegister extends ActivityBaseNoSliding implements View.OnCl
     private void tryToRegister() {
         final String phoneNumberStr = phoneNumber.getText().toString();
         if (TextUtils.isEmpty(phoneNumberStr)) {
-            ToastUtil.makeShortText(getString(R.string.input_phonenum));
+            ToastUtil.makeShortText("输入电话号码");
             return;
         }
         if (!CommonUtil.isPhoneNumberValid(phoneNumberStr)) {
-            ToastUtil.makeShortText(getString(R.string.phone_not_valid));
+            ToastUtil.makeShortText("电话号码不合法");
             return;
         }
 
         String verCodeStr = verCode.getText().toString();
         if (TextUtils.isEmpty(verCodeStr)) {
-            ToastUtil.makeShortText(getString(R.string.vercode_not_null));
+            ToastUtil.makeShortText("输入验证码");
             return;
         }
         final String pwdStr = password.getText().toString();
         if (TextUtils.isEmpty(pwdStr)) {
-            ToastUtil.makeShortText(getResources().getString(R.string.input_pwd));
+            ToastUtil.makeShortText("输入密码");
             return;
         }
         Map<String, String> params = new HashMap<>();
@@ -120,13 +120,13 @@ public class ActivityRegister extends ActivityBaseNoSliding implements View.OnCl
                     @Override
                     public void onError(Call call, Exception e) {
                         Log.d("xiaoyu", e.toString());
-                        ToastUtil.makeShortText(getString(R.string.register_failed));
+                        ToastUtil.makeShortText("注册失败");
                     }
 
                     @Override
                     public void onResponse(String response) {
                         Log.d("xiaoyu", response);
-                        ToastUtil.makeShortText(getString(R.string.register_successful));
+                        ToastUtil.makeShortText("注册成功");
                         finish();
                     }
                 });
@@ -135,11 +135,11 @@ public class ActivityRegister extends ActivityBaseNoSliding implements View.OnCl
     private void tryToGetVerCode() {
         String phoneStr = phoneNumber.getText().toString();
         if (TextUtils.isEmpty(phoneStr)) {
-            ToastUtil.makeShortText(getResources().getString(R.string.input_phonenum));
+            ToastUtil.makeShortText("输入电话号码");
             return;
         }
         if (!CommonUtil.isPhoneNumberValid(phoneStr)) {
-            ToastUtil.makeShortText(getString(R.string.phone_not_valid));
+            ToastUtil.makeShortText("电话号码不合法");
             return;
         }
         Map<String, String> params = new HashMap<>();
@@ -153,13 +153,13 @@ public class ActivityRegister extends ActivityBaseNoSliding implements View.OnCl
                     @Override
                     public void onError(Call call, Exception e) {
                         Log.d("xiaoyu", e.toString());
-                        ToastUtil.makeShortText(getString(R.string.get_vercode_failed));
+                        ToastUtil.makeShortText("获取验证码失败");
                     }
 
                     @Override
                     public void onResponse(String response) {
                         Log.d("xiaoyu", response);
-                        ToastUtil.makeShortText(getString(R.string.vercode_already_send));
+                        ToastUtil.makeShortText("验证码已经发送");
                         boolean clickable = getVerCode.isClickable();
                         if (clickable) {
                             getVerCode.setClickable(false);
@@ -178,7 +178,7 @@ public class ActivityRegister extends ActivityBaseNoSliding implements View.OnCl
             getVerCode.setText(String.valueOf(currentSeconds));
             weakHandler.sendEmptyMessageDelayed(1, TimeSpan);
         } else {
-            getVerCode.setText(getString(R.string.get_vercode));
+            getVerCode.setText("获取验证码");
             getVerCode.setClickable(true);
         }
         return true;

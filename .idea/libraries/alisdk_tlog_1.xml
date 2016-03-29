@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="alisdk-tlog-1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/alisdk-tlog-1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

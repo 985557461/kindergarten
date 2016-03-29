@@ -27,5 +27,24 @@
     <orderEntry type="library" name="android-support-v7-gridlayout" level="project" />
     <orderEntry type="library" name="android-support-v7-mediarouter" level="project" />
     <orderEntry type="library" name="android-support-v7-recyclerview" level="project" />
+    <orderEntry type="library" name="alipaySingle-20160223" level="project" />
+    <orderEntry type="library" name="alisdk-alipay-3" level="project" />
+    <orderEntry type="library" name="alisdk-hotpatch-3" level="project" />
+    <orderEntry type="library" name="alisdk-kernel-2.1.0" level="project" />
+    <orderEntry type="library" name="alisdk-kernel-base-2.1.0" level="project" />
+    <orderEntry type="library" name="alisdk-login-9" level="project" />
+    <orderEntry type="library" name="alisdk-rpc-3" level="project" />
+    <orderEntry type="library" name="alisdk-security-8" level="project" />
+    <orderEntry type="library" name="alisdk-system-15" level="project" />
+    <orderEntry type="library" name="alisdk-tlog-1" level="project" />
+    <orderEntry type="library" name="alisdk-trade-12" level="project" />
+    <orderEntry type="library" name="alisdk-ui-7" level="project" />
+    <orderEntry type="library" name="alisdk-upload-1" level="project" />
+    <orderEntry type="library" name="alisdk-ut-5" level="project" />
+    <orderEntry type="library" name="IMCore-1.9.7" level="project" />
+    <orderEntry type="library" name="IMKit-1.9.7" level="project" />
+    <orderEntry type="library" name="sdk-legacy-support-2.1.0" level="project" />
+    <orderEntry type="library" name="securityguard-3.1.27" level="project" />
+    <orderEntry type="library" name="utdid4all-1.0.4" level="project" />
   </component>
 </module>

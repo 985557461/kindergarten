@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="alisdk-login-9">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/alisdk-login-9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

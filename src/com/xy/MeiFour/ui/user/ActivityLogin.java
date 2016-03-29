@@ -76,12 +76,12 @@ public class ActivityLogin extends ActivityBaseNoSliding implements View.OnClick
     private void tryToLogin() {
         String phoneStr = phoneNumber.getText().toString();
         if (TextUtils.isEmpty(phoneStr)) {
-            ToastUtil.makeShortText(getString(R.string.input_phonenum));
+            ToastUtil.makeShortText(" ‰»ÎµÁª∞∫≈¬Î");
             return;
         }
         String pwdStr = password.getText().toString();
         if (TextUtils.isEmpty(pwdStr)) {
-            ToastUtil.makeShortText(getString(R.string.input_pwd));
+            ToastUtil.makeShortText(" ‰»Î√‹¬Î");
             return;
         }
         Map<String, String> params = new HashMap<>();
@@ -97,13 +97,13 @@ public class ActivityLogin extends ActivityBaseNoSliding implements View.OnClick
                     @Override
                     public void onError(Call call, Exception e) {
                         Log.d("xiaoyu", e.toString());
-                        ToastUtil.makeShortText(getString(R.string.login_failed));
+                        ToastUtil.makeShortText("µ«¬º ß∞‹");
                     }
 
                     @Override
                     public void onResponse(String response) {
                         Log.d("xiaoyu", response);
-                        ToastUtil.makeShortText(getString(R.string.login_successful));
+                        ToastUtil.makeShortText("µ«¬Ω≥…π¶");
                         Intent intent = new Intent(ActivityLogin.this, ActivityMain.class);
                         IntentUtils.getInstance().startActivity(ActivityLogin.this, intent);
                         finish();

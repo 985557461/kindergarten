@@ -84,7 +84,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                     @Override
                     public void onError(Call call, Exception e) {
                         refreshContainer.refreshComplete();
-                        ToastUtil.makeShortText(getActivity().getString(R.string.data_get_failed));
+                        ToastUtil.makeShortText("数据获取失败");
                     }
 
                     @Override
@@ -98,7 +98,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     private void updateViews() {
         if (homeInfoModel == null || !"1".equals(homeInfoModel.result)) {
-            ToastUtil.makeShortText(getActivity().getString(R.string.data_get_failed));
+            ToastUtil.makeShortText("数据获取失败");
             return;
         }
         if (homeHeaderView != null) {

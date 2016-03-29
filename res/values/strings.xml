@@ -1,18 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ChatWebSocket</string>
-    <string name="input_phonenum">请输入手机号码</string>
-    <string name="input_pwd">请输入密码</string>
-    <string name="phone_not_valid">輸入的手机号不合法</string>
-    <string name="double_back_finish">再按一次返回键退出</string>
-    <string name="vercode_not_null">验证码不能为空</string>
-    <string name="get_vercode_failed">获取验证码失败</string>
-    <string name="vercode_already_send">验证码已经发送</string>
-    <string name="get_vercode">获取验证码</string>
-    <string name="register_failed">注册失败</string>
-    <string name="register_successful">注册成功</string>
-    <string name="login_failed">登陆失败</string>
-    <string name="login_successful">登陆成功</string>
-    <string name="today_tejia">今日特价</string>
-    <string name="data_get_failed">数据获取失败</string>
+
 </resources>
