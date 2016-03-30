@@ -28,13 +28,13 @@
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
     <!--阿里百川 结束-->
 
-    <meta-data android:name="com.xy.MeiFour.util.glide.GlideConfiguration"
-               android:value="GlideModule"/>
-
     <application
             android:name="com.xy.MeiFour.ui.CustomApplication"
             android:icon="@drawable/ic_launcher"
             android:theme="@android:style/Theme.NoTitleBar">
+        <meta-data android:name="com.xy.MeiFour.util.glide.GlideConfiguration"
+                   android:value="GlideModule"/>
+        <meta-data android:name="com.alibaba.app.appkey" android:value="23334534"/>
         <activity android:name="com.xy.MeiFour.ui.user.ActivityLogin"
                   android:screenOrientation="portrait">
         </activity>

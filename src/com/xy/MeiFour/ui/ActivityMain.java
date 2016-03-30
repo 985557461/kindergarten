@@ -12,6 +12,7 @@ import com.xy.MeiFour.ui.cart.CartFragment;
 import com.xy.MeiFour.ui.common.ActivityBaseNoSliding;
 import com.xy.MeiFour.ui.dapei.DaPeiFragment;
 import com.xy.MeiFour.ui.home.HomeFragment;
+import com.xy.MeiFour.ui.mine.MineFragment;
 import com.xy.MeiFour.util.ActivityManagerUtil;
 import com.xy.MeiFour.util.ToastUtil;
 
@@ -24,6 +25,7 @@ public class ActivityMain extends ActivityBaseNoSliding implements View.OnClickL
     private HomeFragment homeFragment;
     private DaPeiFragment daPeiFragment;
     private CartFragment cartFragment;
+    private MineFragment mineFragment;
 
     /**
      * views*
@@ -31,9 +33,6 @@ public class ActivityMain extends ActivityBaseNoSliding implements View.OnClickL
     private View homeLL;
     private ImageView homeImageView;
     private TextView homeTextView;
-    private View dataLL;
-    private ImageView dataImageView;
-    private TextView dataTextView;
     private View smartLL;
     private ImageView smartImageView;
     private TextView smartTextView;
@@ -62,10 +61,6 @@ public class ActivityMain extends ActivityBaseNoSliding implements View.OnClickL
         homeImageView = (ImageView) findViewById(R.id.homeImageView);
         homeTextView = (TextView) findViewById(R.id.homeTextView);
 
-        dataLL = findViewById(R.id.dataLL);
-        dataImageView = (ImageView) findViewById(R.id.dataImageView);
-        dataTextView = (TextView) findViewById(R.id.dataTextView);
-
         smartLL = findViewById(R.id.smartLL);
         smartImageView = (ImageView) findViewById(R.id.smartImageView);
         smartTextView = (TextView) findViewById(R.id.smartTextView);
@@ -88,7 +83,6 @@ public class ActivityMain extends ActivityBaseNoSliding implements View.OnClickL
     @Override
     protected void setListeners() {
         homeLL.setOnClickListener(this);
-        dataLL.setOnClickListener(this);
         smartLL.setOnClickListener(this);
         cartLL.setOnClickListener(this);
         myCenterLL.setOnClickListener(this);
@@ -100,17 +94,14 @@ public class ActivityMain extends ActivityBaseNoSliding implements View.OnClickL
             case R.id.homeLL:
                 changeTab(0);
                 break;
-            case R.id.dataLL:
+            case R.id.smartLL:
                 changeTab(1);
                 break;
-            case R.id.smartLL:
+            case R.id.cartLL:
                 changeTab(2);
                 break;
-            case R.id.cartLL:
-                changeTab(3);
-                break;
             case R.id.myCenterLL:
-                changeTab(4);
+                changeTab(3);
                 break;
         }
     }
@@ -128,13 +119,11 @@ public class ActivityMain extends ActivityBaseNoSliding implements View.OnClickL
         switch (index) {
             case 0: {
                 homeImageView.setImageResource(R.drawable.home_red);
-                dataImageView.setImageResource(R.drawable.data_white);
                 smartImageView.setImageResource(R.drawable.smart_white);
                 cartImageView.setImageResource(R.drawable.car_white);
                 myCenterImageView.setImageResource(R.drawable.mine_white);
 
                 homeTextView.setSelected(true);
-                dataTextView.setSelected(false);
                 smartTextView.setSelected(false);
                 cartTextView.setSelected(false);
                 myCenterTextView.setSelected(false);
@@ -147,28 +136,11 @@ public class ActivityMain extends ActivityBaseNoSliding implements View.OnClickL
             break;
             case 1: {
                 homeImageView.setImageResource(R.drawable.home_white);
-                dataImageView.setImageResource(R.drawable.data_red);
-                smartImageView.setImageResource(R.drawable.smart_white);
-                cartImageView.setImageResource(R.drawable.car_white);
-                myCenterImageView.setImageResource(R.drawable.mine_white);
-
-                homeTextView.setSelected(false);
-                dataTextView.setSelected(true);
-                smartTextView.setSelected(false);
-                cartTextView.setSelected(false);
-                myCenterTextView.setSelected(false);
-
-            }
-            break;
-            case 2: {
-                homeImageView.setImageResource(R.drawable.home_white);
-                dataImageView.setImageResource(R.drawable.data_white);
                 smartImageView.setImageResource(R.drawable.smart_red);
                 cartImageView.setImageResource(R.drawable.car_white);
                 myCenterImageView.setImageResource(R.drawable.mine_white);
 
                 homeTextView.setSelected(false);
-                dataTextView.setSelected(false);
                 smartTextView.setSelected(true);
                 cartTextView.setSelected(false);
                 myCenterTextView.setSelected(false);
@@ -179,15 +151,13 @@ public class ActivityMain extends ActivityBaseNoSliding implements View.OnClickL
                 switchContent(mFragmentCurrent,daPeiFragment);
             }
             break;
-            case 3: {
+            case 2: {
                 homeImageView.setImageResource(R.drawable.home_white);
-                dataImageView.setImageResource(R.drawable.data_white);
                 smartImageView.setImageResource(R.drawable.smart_white);
                 cartImageView.setImageResource(R.drawable.car_red);
                 myCenterImageView.setImageResource(R.drawable.mine_white);
 
                 homeTextView.setSelected(false);
-                dataTextView.setSelected(false);
                 smartTextView.setSelected(false);
                 cartTextView.setSelected(true);
                 myCenterTextView.setSelected(false);
@@ -198,18 +168,21 @@ public class ActivityMain extends ActivityBaseNoSliding implements View.OnClickL
                 switchContent(mFragmentCurrent, cartFragment);
             }
             break;
-            case 4: {
+            case 3: {
                 homeImageView.setImageResource(R.drawable.home_white);
-                dataImageView.setImageResource(R.drawable.data_white);
                 smartImageView.setImageResource(R.drawable.smart_white);
                 cartImageView.setImageResource(R.drawable.car_white);
                 myCenterImageView.setImageResource(R.drawable.mine_red);
 
                 homeTextView.setSelected(false);
-                dataTextView.setSelected(false);
                 smartTextView.setSelected(false);
                 cartTextView.setSelected(false);
                 myCenterTextView.setSelected(true);
+
+                if (mineFragment == null) {
+                    mineFragment = new MineFragment();
+                }
+                switchContent(mFragmentCurrent, mineFragment);
             }
             break;
         }

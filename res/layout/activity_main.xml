@@ -41,28 +41,6 @@
                     android:text="首页"
                     android:textSize="14sp"/>
         </LinearLayout>
-        <!--数据采集-->
-        <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:id="@+id/dataLL">
-            <ImageView
-                    android:id="@+id/dataImageView"
-                    android:layout_width="23dp"
-                    android:layout_height="23dp"
-                    android:src="@drawable/data_white"
-                    android:layout_marginBottom="5dp"/>
-            <TextView
-                    android:id="@+id/dataTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@drawable/home_tab_text_selector"
-                    android:text="数据"
-                    android:textSize="14sp"/>
-        </LinearLayout>
         <!--智能搭配-->
         <LinearLayout
                 android:layout_width="0dp"
