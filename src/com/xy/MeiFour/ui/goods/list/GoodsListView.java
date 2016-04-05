@@ -9,24 +9,50 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import com.xy.MeiFour.R;
+import com.xy.MeiFour.common_background.ServerConfig;
+import com.xy.MeiFour.ui.goods.model.GoodsItemModel;
+import com.xy.MeiFour.ui.goods.model.GoodsListModel;
+import com.xy.MeiFour.util.GsonUtil;
+import com.xy.MeiFour.util.ToastUtil;
+import com.xy.MeiFour.util.okhttp.OkHttpUtils;
+import com.xy.MeiFour.util.okhttp.callback.StringCallback;
+import com.xy.MeiFour.util.recyclerview.AutoLoadMoreRecyclerView;
 import com.xy.MeiFour.util.recyclerview.DividerGridItemDecoration;
+import com.xy.MeiFour.util.recyclerview.LoadMoreInterface;
 import com.xy.MeiFour.util.ultra_pull_refresh.PtrClassicFrameLayout;
 import com.xy.MeiFour.util.ultra_pull_refresh.PtrDefaultHandler;
 import com.xy.MeiFour.util.ultra_pull_refresh.PtrFrameLayout;
 import com.xy.MeiFour.util.ultra_pull_refresh.PtrHandler;
+import okhttp3.Call;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by xiaoyu on 2016/3/24.
  */
 public class GoodsListView extends FrameLayout {
     private PtrClassicFrameLayout refreshContainer;
-    private RecyclerView recyclerView;
-    private GoodsListHeaderView headerView;
+    private AutoLoadMoreRecyclerView recyclerView;
 
     private GoodsAdapter goodsAdapter;
+    private List<GoodsItemModel> itemModels = new ArrayList<>();
+
+    //status 0 综合 1 销量 2 最新 3价格
+    private static final int limit = 20;
+    private int start_num = 0;
+    private int status = 0;
 
     public GoodsListView(Context context) {
         super(context);
+        init(context);
+    }
+
+    public GoodsListView(Context context, int status) {
+        super(context);
+        this.status = status;
         init(context);
     }
 
@@ -45,12 +71,9 @@ public class GoodsListView extends FrameLayout {
         inflater.inflate(R.layout.goods_list_view, this, true);
 
         refreshContainer = (PtrClassicFrameLayout) findViewById(R.id.refreshContainer);
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        recyclerView.addItemDecoration(new DividerGridItemDecoration(getContext(), R.drawable.goods_list_divider));
-
-        headerView = new GoodsListHeaderView(getContext());
-        headerView.attachTo(recyclerView);
+        recyclerView = (AutoLoadMoreRecyclerView) findViewById(R.id.recyclerView);
+        recyclerView.getRecyclerView().setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        recyclerView.getRecyclerView().addItemDecoration(new DividerGridItemDecoration(getContext(), R.drawable.goods_list_divider));
 
         refreshContainer.setLastUpdateTimeRelateObject(this);
         refreshContainer.setPtrHandler(new PtrHandler() {
@@ -61,13 +84,100 @@ public class GoodsListView extends FrameLayout {
 
             @Override
             public void onRefreshBegin(PtrFrameLayout frame) {
-                refreshContainer.refreshComplete();
+                refreshData();
             }
         });
-        refreshContainer.autoRefresh();
+
+        recyclerView.setLoadMoreInterface(new LoadMoreInterface() {
+            @Override
+            public void loadMore() {
+                loadMoreData();
+            }
+        });
 
         goodsAdapter = new GoodsAdapter(getContext());
         recyclerView.setAdapter(goodsAdapter);
+    }
+
+    public void refreshData() {
+        start_num = 1;
+        Map<String, String> params = new HashMap<>();
+        params.put("limit", limit + "");
+        params.put("start_num", start_num + "");
+        params.put("status", status + "");
+        OkHttpUtils.get()
+                .params(params)
+                .url(ServerConfig.BASE_URL + ServerConfig.QUERY_PRODUCTS)
+                .tag(this)
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e) {
+                        refreshContainer.refreshComplete();
+                        ToastUtil.makeShortText("网络连接失败了");
+                    }
+
+                    @Override
+                    public void onResponse(String response) {
+                        refreshContainer.refreshComplete();
+                        GoodsListModel goodsListModel = GsonUtil.transModel(response, GoodsListModel.class);
+                        if (goodsListModel == null || !"1".equals(goodsListModel.result)) {
+                            ToastUtil.makeShortText("网络连接失败了");
+                            return;
+                        }
+                        if (goodsListModel.artlist != null) {
+                            itemModels.clear();
+                            itemModels.addAll(goodsListModel.artlist);
+                            goodsAdapter.notifyDataSetChanged();
+                            if (goodsListModel.artlist.size() < 20) {//没有更多了
+                                recyclerView.hasMore(false);
+                            } else {//也许还有更多
+                                recyclerView.hasMore(true);
+                            }
+                        }
+                    }
+                });
+    }
+
+    private void loadMoreData() {
+        start_num++;
+        Map<String, String> params = new HashMap<>();
+        params.put("limit", limit + "");
+        params.put("start_num", start_num + "");
+        params.put("status", status + "");
+        OkHttpUtils.get()
+                .params(params)
+                .url(ServerConfig.BASE_URL + ServerConfig.QUERY_PRODUCTS)
+                .tag(this)
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e) {
+                        start_num--;
+                        recyclerView.loadMoreCompleted();
+                        ToastUtil.makeShortText("网络连接失败了");
+                    }
+
+                    @Override
+                    public void onResponse(String response) {
+                        recyclerView.loadMoreCompleted();
+                        GoodsListModel goodsListModel = GsonUtil.transModel(response, GoodsListModel.class);
+                        if (goodsListModel == null || !"1".equals(goodsListModel.result)) {
+                            start_num--;
+                            ToastUtil.makeShortText("网络连接失败了");
+                            return;
+                        }
+                        if (goodsListModel.artlist != null) {
+                            itemModels.addAll(goodsListModel.artlist);
+                            goodsAdapter.notifyDataSetChanged();
+                            if (goodsListModel.artlist.size() < 20) {//没有更多了
+                                recyclerView.hasMore(false);
+                            } else {//也许还有更多
+                                recyclerView.hasMore(true);
+                            }
+                        }
+                    }
+                });
     }
 
     private class GoodsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
@@ -100,7 +210,7 @@ public class GoodsListView extends FrameLayout {
             if (viewHolder instanceof SpaceItemViewHolder) {
                 ((SpaceItemViewHolder) viewHolder).setData();
             } else if (viewHolder instanceof GoodsItemViewHolder) {
-                ((GoodsItemViewHolder) viewHolder).setData();
+                ((GoodsItemViewHolder) viewHolder).setData(itemModels.get(i - 1));
             }
         }
 
@@ -115,7 +225,7 @@ public class GoodsListView extends FrameLayout {
 
         @Override
         public int getItemCount() {
-            return 31;
+            return itemModels.size() + 1;
         }
     }
 }

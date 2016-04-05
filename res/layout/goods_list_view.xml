@@ -16,14 +16,9 @@
             app:ptr_pull_to_fresh="false"
             app:ptr_ratio_of_header_height_to_refresh="1.2"
             app:ptr_resistance="1.7">
-        <FrameLayout android:layout_width="match_parent"
-                     android:layout_height="match_parent"
-                     android:paddingLeft="8dp"
-                     android:paddingRight="8dp">
-            <android.support.v7.widget.RecyclerView
-                    android:id="@+id/recyclerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-        </FrameLayout>
+        <com.xy.MeiFour.util.recyclerview.AutoLoadMoreRecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
     </com.xy.MeiFour.util.ultra_pull_refresh.PtrClassicFrameLayout>
 </LinearLayout>

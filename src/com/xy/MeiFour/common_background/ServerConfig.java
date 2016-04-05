@@ -23,4 +23,6 @@ public class ServerConfig {
     public static final String URL_REGISTER = "meifor/api/accounts/activate.do";
     public static final String URL_LOGIN = "meifor/api/accounts/login.do";
     public static final String URL_HOME_INFO = "meifor/api/product/queryType.do";
+    public static final String QUERY_PRODUCTS = "meifor/api/product/queryPruducts.do";
+    public static final String QUERY_GOODS_INFO = "meifor/api/product/queryPruductDetail.do";
 }

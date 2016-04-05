@@ -44,6 +44,11 @@ public class ActivityGoodsList extends ActivityBaseNoSliding implements View.OnC
     @Override
     protected void initViews() {
         changeTabe(0);
+
+        zongHeListView.refreshData();
+        xiaoLiangListView.refreshData();
+        zuiXinListView.refreshData();
+        jiaGeListView.refreshData();
     }
 
     @Override

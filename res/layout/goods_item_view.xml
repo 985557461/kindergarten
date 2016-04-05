@@ -18,6 +18,7 @@
             app:rightBottomRound="false"
             android:layout_marginBottom="12dp"/>
     <TextView
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="时尚连衣裙最低价出售（韩版很受欢迎）"
@@ -36,6 +37,7 @@
             android:paddingRight="10dp"
             android:layout_marginBottom="12dp">
         <TextView
+                android:id="@+id/price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="299.00"
