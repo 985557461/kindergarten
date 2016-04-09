@@ -40,10 +40,6 @@
         </activity>
         <activity android:name="com.xy.MeiFour.ui.ActivityMain"
                   android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name="com.xy.MeiFour.ui.user.ActivityRegister"
                   android:screenOrientation="portrait"/>
@@ -53,6 +49,19 @@
                   android:screenOrientation="portrait"/>
         <activity android:name=".ui.goods.local.ActivityGoodsInfoLocal"
                   android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.dapei.ActivityInfoCommited"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.dapei.ActivityWeightSelect"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.dapei.ActivityPhotoUpload"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
 
 
