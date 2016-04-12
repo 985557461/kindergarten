@@ -58,6 +58,12 @@
         </activity>
         <activity android:name=".ui.dapei.ActivityPhotoUpload"
                   android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.dapei.ActivityFengGeSelect"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.dapei.ActivityMyInfo"
+                  android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
